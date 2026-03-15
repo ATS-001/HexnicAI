@@ -13,7 +13,7 @@ const modules = [
   {
     title: "StudyAI",
     description: "AI-driven planner that adjusts study time based on subject difficulty.",
-    link: "#",
+    link: "https://studyai-2026.vercel.app/",
     linkText: "Explore",
   },
   {
@@ -348,7 +348,7 @@ export default function HexnicAI() {
               >
                 {/* Timeline dot - centered on the line */}
                 <div className="absolute left-4 md:left-1/2 top-5 w-4 h-4 bg-blue-600 rounded-full border-4 border-background -translate-x-1/2 z-10" />
-                
+
                 <AnimatedText
                   animation={item.direction === "left" ? "fade-right" : "fade-left"}
                   delay={i * 100}
