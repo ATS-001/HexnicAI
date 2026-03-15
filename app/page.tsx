@@ -157,10 +157,18 @@ export default function HexnicAI() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-background flex items-center justify-center z-[10000]">
-        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center animate-pulse">
-          <span className="text-white font-bold text-2xl">H</span>
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+        <div className="relative">
+          <img
+            src="/logo.png"
+            alt="HexnicAI Logo"
+            className="w-24 h-24 object-contain animate-pulse"
+          />
+          <div className="absolute inset-0 rounded-full bg-blue-500/20 animate-ping" />
         </div>
+        <p className="mt-6 text-lg font-semibold text-blue-600 dark:text-blue-400 animate-pulse">
+          Loading HexnicAI...
+        </p>
       </div>
     )
   }
@@ -176,9 +184,11 @@ export default function HexnicAI() {
             onClick={scrollToTop}
             className="flex items-center gap-3 group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-              <span className="text-white font-bold text-lg">H</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="HexnicAI Logo"
+              className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+            />
             <span className="font-bold text-xl text-blue-600 dark:text-blue-400">
               HexnicAI
             </span>
