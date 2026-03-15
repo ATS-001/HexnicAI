@@ -451,24 +451,26 @@ export default function HexnicAI() {
       </section>
 
       {/* Feedback Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-500 text-white relative z-10">
-        <div className="container mx-auto px-4 text-center">
-          <AnimatedText animation="fade-up">
-            <h2 className="text-3xl font-bold mb-4">Help Us Improve</h2>
-          </AnimatedText>
-          <AnimatedText animation="fade-up" delay={100}>
-            <p className="mb-8 opacity-90">
-              Your suggestions help make HexnicAI more inclusive for everyone.
-            </p>
-          </AnimatedText>
-          <AnimatedText animation="fade-up" delay={200}>
-            <AnimatedButton
-              href="https://forms.gle/JScLaZhBx8YLofV9A"
-              className="bg-white text-blue-600 hover:bg-white/90 hover:shadow-xl"
-            >
-              Send Feedback
-            </AnimatedButton>
-          </AnimatedText>
+      <section className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-8 md:p-12 text-center shadow-lg hover:shadow-xl hover:border-blue-500/50 transition-all duration-300">
+            <AnimatedText animation="fade-up">
+              <h2 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">Help Us Improve</h2>
+            </AnimatedText>
+            <AnimatedText animation="fade-up" delay={100}>
+              <p className="mb-8 text-muted-foreground">
+                Your suggestions help make HexnicAI more inclusive for everyone.
+              </p>
+            </AnimatedText>
+            <AnimatedText animation="fade-up" delay={200}>
+              <AnimatedButton
+                href="https://forms.gle/JScLaZhBx8YLofV9A"
+                className="bg-blue-600 text-white hover:bg-blue-700 hover:shadow-xl"
+              >
+                Send Feedback
+              </AnimatedButton>
+            </AnimatedText>
+          </div>
         </div>
       </section>
 
