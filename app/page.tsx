@@ -478,19 +478,19 @@ export default function HexnicAI() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-foreground text-background relative z-10">
+      <footer className="py-12 bg-slate-900 dark:bg-slate-950 text-white relative z-10 border-t border-slate-800">
         <div className="container mx-auto px-4 text-center">
-          <p className="mb-2">Developed by Students of Vidya Academy of Science and Technology</p>
-          <p className="text-sm opacity-70">© 2026 HexnicAI || Part of ATS_PDZ</p>
-          <p className="text-sm opacity-70">© SINCE 2023 | ATS-PDZ</p>
-          <p className="text-sm opacity-70 mb-6">ALL RIGHTS RESERVED.</p>
-          <AnimatedButton
+          <p className="mb-2 text-slate-200">Developed by Students of Vidya Academy of Science and Technology</p>
+          <p className="text-sm text-slate-400">© 2026 HexnicAI || Part of ATS_PDZ</p>
+          <p className="text-sm text-slate-400">© SINCE 2023 | ATS-PDZ</p>
+          <p className="text-sm text-slate-400 mb-6">ALL RIGHTS RESERVED.</p>
+          <a
             href="mailto:aaronsooraj001@gmail.com"
-            className="bg-blue-600 text-white hover:bg-blue-700"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 active:scale-95"
           >
             <Mail size={16} />
-            Contact Us
-          </AnimatedButton>
+            <span>Contact Us</span>
+          </a>
         </div>
       </footer>
 
