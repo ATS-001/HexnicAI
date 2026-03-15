@@ -336,40 +336,35 @@ export default function HexnicAI() {
           </AnimatedText>
           <div className="relative max-w-4xl mx-auto">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-blue-600/30 -translate-x-1/2" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-blue-600/30 md:-translate-x-1/2" />
 
             {roadmap.map((item, i) => (
-              <AnimatedText
+              <div
                 key={i}
-                animation={item.direction === "left" ? "fade-right" : "fade-left"}
-                delay={i * 100}
                 className={cn(
-                  "relative mb-8 md:w-[46%]",
-                  item.direction === "left"
-                    ? "md:mr-auto md:text-right md:pr-8"
-                    : "md:ml-auto md:text-left md:pl-8",
-                  "pl-12 md:pl-0"
+                  "relative mb-8 flex",
+                  item.direction === "left" ? "md:justify-start" : "md:justify-end"
                 )}
               >
-                <div className="relative">
-                  {/* Timeline dot */}
-                  <div
-                    className={cn(
-                      "absolute w-4 h-4 bg-blue-600 rounded-full border-4 border-background top-4",
-                      "left-[-2rem] md:left-auto",
-                      item.direction === "left"
-                        ? "md:right-[-2.5rem]"
-                        : "md:left-[-2.5rem]"
-                    )}
-                  />
+                {/* Timeline dot - centered on the line */}
+                <div className="absolute left-4 md:left-1/2 top-5 w-4 h-4 bg-blue-600 rounded-full border-4 border-background -translate-x-1/2 z-10" />
+                
+                <AnimatedText
+                  animation={item.direction === "left" ? "fade-right" : "fade-left"}
+                  delay={i * 100}
+                  className={cn(
+                    "md:w-[45%] pl-12 md:pl-0",
+                    item.direction === "left" ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
+                  )}
+                >
                   <div className="bg-card p-4 rounded-xl border border-border/50 shadow-sm hover:shadow-lg hover:border-blue-500/50 transition-all duration-300">
                     <h3 className="font-bold">{item.title}</h3>
                     <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">
                       {item.date}
                     </span>
                   </div>
-                </div>
-              </AnimatedText>
+                </AnimatedText>
+              </div>
             ))}
           </div>
         </div>
