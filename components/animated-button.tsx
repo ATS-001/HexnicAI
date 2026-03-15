@@ -88,7 +88,7 @@ export function AnimatedButton({
       {/* Shimmer effect */}
       <span className="absolute inset-0 -translate-x-full hover:animate-[shimmer_1s_ease-in-out] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 inline-flex items-center justify-center gap-2">{children}</span>
     </Component>
   )
 }
