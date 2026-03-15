@@ -37,11 +37,11 @@ const modules = [
 ]
 
 const roadmap = [
-  { title: "ATS-PDZ Formed", date: "Jan 2023", direction: "right" },
+  { title: "ATS_PDZ Formed", date: "Jan 2023", direction: "right" },
   { title: "HexnicAI Conceptualized", date: "Dec 2025", direction: "left" },
-  { title: "Initial Tool Release", date: "Jan 2026", direction: "right" },
-  { title: "Available in HexnicAI", date: "Jan 2026", direction: "left" },
-  { title: "Initial Deployment", date: "Feb 2026", direction: "right" },
+  { title: "Initial Tool (StudyAI,SpeakEasy) Release", date: "Jan 2026", direction: "right" },
+  { title: "(StudyAI,SpeakEasy) Available in HexnicAI", date: "Feb 2026", direction: "left" },
+  { title: "Initial Deployment of HexnicAI Prototype", date: "Feb 2026", direction: "right" },
   { title: "FocusAI Launch", date: "Mar 2026", direction: "left" },
   { title: "### Coming Soon ###", date: "Mar 2026", direction: "right" },
 ]
