@@ -119,4 +119,3 @@ Educational and research purposes.
 
 ---
 
-<a href="https://v0.app/chat/api/kiro/clone/ATS-001/HexnicAI" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
