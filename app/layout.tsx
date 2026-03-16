@@ -59,6 +59,28 @@ export const metadata: Metadata = {
   },
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HexnicAI",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "description": "HexnicAI is an AI-powered educational platform providing StudyAI timetable generation, SpeakEasy accessibility tools, and FocusAI AI assistant.",
+  "url": "https://hexnicai.vercel.app",
+  "creator": {
+    "@type": "Organization",
+    "name": "HexnicAI"
+  },
+  "featureList": [
+    "StudyAI Smart Timetable Generator",
+    "SpeakEasy Accessibility Tools",
+    "FocusAI AI Assistant (Coming Soon)",
+    "AI Study Planner",
+    "Text-to-Speech Learning Tools",
+    "Voice-Based Learning Assistance"
+  ]
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +88,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         <Analytics />
