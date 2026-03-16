@@ -178,8 +178,8 @@ export default function HexnicAI() {
       <BrownianMotion isDark={isDark} />
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-xl z-[3000] border-b border-border/50">
-        <div className="flex items-center justify-between w-[90%] max-w-7xl mx-auto py-3">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl bg-background/80 backdrop-blur-xl z-[3000] border border-border/50 rounded-2xl shadow-lg">
+        <div className="flex items-center justify-between px-6 py-3">
           <button
             onClick={scrollToTop}
             className="flex items-center gap-3 group"
@@ -481,6 +481,26 @@ export default function HexnicAI() {
           <p className="text-sm text-slate-400">© 2026 HexnicAI || Part of ATS_PDZ</p>
           <p className="text-sm text-slate-400">© SINCE 2023 | ATS-PDZ</p>
           <p className="text-sm text-slate-400 mb-6">ALL RIGHTS RESERVED.</p>
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+            <a
+              href="/docs"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-slate-800 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:bg-slate-700 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 border border-slate-700"
+            >
+              Docs
+            </a>
+            <a
+              href="/terms"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-slate-800 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:bg-slate-700 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 border border-slate-700"
+            >
+              Terms
+            </a>
+            <a
+              href="/privacy"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-slate-800 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:bg-slate-700 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 border border-slate-700"
+            >
+              Privacy
+            </a>
+          </div>
           <a
             href="mailto:aaronsooraj001@gmail.com"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 active:scale-95"
