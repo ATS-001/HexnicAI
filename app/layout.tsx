@@ -7,33 +7,61 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'HexnicAI | AI Learning Platform with StudyAI, SpeakEasy Tools & FocusAI',
-  description: 'HexnicAI is an AI-powered learning platform that helps students study smarter. Featuring StudyAI for smart timetables, SpeakEasy accessibility tools, and FocusAI – a GPT-like AI assistant coming soon.',
+  title: 'HexnicAI (Hexnic AI) – AI Learning Platform with StudyAI, SpeakEasy & FocusAI',
+  description: 'HexnicAI (also known as Hexnic AI) is an AI-powered personalized learning platform featuring StudyAI smart timetable generation, SpeakEasy accessibility tools, and FocusAI assistant.',
+
   keywords: [
-    'HexnicAI', 'StudyAI', 'SpeakEasy Tools', 'FocusAI', 'AI study planner',
-    'AI timetable generator', 'student productivity AI', 'AI learning assistant',
-    'AI study tools', 'smart study planner', 'AI timetable generator for students',
-    'study planning AI', 'voice accessibility tools', 'text to speech learning tools',
-    'dyslexia learning tools', 'AI education platform', 'AI student assistant',
-    'AI powered study schedule', 'AI productivity tools for students',
-    'study automation tools', 'learning accessibility AI', 'student time management AI',
-    'smart learning platform', 'AI academic tools', 'AI study companion',
-    'AI voice learning tools', 'AI accessibility tools', 'AI powered learning platform'
+    'HexnicAI',
+    'Hexnic AI',
+    'Hexnic AI learning platform',
+    'Hexnic AI project',
+    'HexnicAI students project',
+    'StudyAI',
+    'SpeakEasy Tools',
+    'FocusAI',
+    'AI study planner',
+    'AI timetable generator',
+    'student productivity AI',
+    'AI learning assistant',
+    'AI study tools',
+    'smart study planner',
+    'AI timetable generator for students',
+    'study planning AI',
+    'voice accessibility tools',
+    'text to speech learning tools',
+    'dyslexia learning tools',
+    'AI education platform',
+    'AI student assistant',
+    'AI powered study schedule',
+    'AI productivity tools for students',
+    'study automation tools',
+    'learning accessibility AI',
+    'student time management AI',
+    'smart learning platform',
+    'AI academic tools',
+    'AI study companion',
+    'AI voice learning tools',
+    'AI accessibility tools',
+    'AI powered learning platform'
   ],
-  authors: [{ name: 'HexnicAI Team' }],
-  generator: 'v0.app',
+
+  authors: [{ name: 'Aaron Thalakkottor Sooraj and Team HexnicAI' }],
+  generator: 'Next.js',
   applicationName: 'HexnicAI',
   robots: 'index, follow',
+
   icons: {
     icon: '/logo.png',
     apple: '/logo.png',
   },
+
   verification: {
     google: 'YdyjQQrxiPXv72EHfQr1Ilffq4IJOtRnqljLC5yKE4s',
   },
+
   openGraph: {
-    title: 'HexnicAI – AI Tools for Smarter Learning',
-    description: 'HexnicAI provides AI tools for students including StudyAI timetable generation, SpeakEasy accessibility tools, and FocusAI – a GPT-like AI assistant coming soon.',
+    title: 'HexnicAI (Hexnic AI) – AI Tools for Smarter Learning',
+    description: 'HexnicAI (Hexnic AI) provides AI tools for students including StudyAI timetable generation, SpeakEasy accessibility tools, and FocusAI AI assistant.',
     type: 'website',
     url: 'https://hexnicai.vercel.app',
     images: [
@@ -45,42 +73,70 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
-    title: 'HexnicAI – AI Tools for Students',
-    description: 'Study smarter with HexnicAI. Includes StudyAI timetable generator, SpeakEasy accessibility tools, and FocusAI AI assistant.',
+    title: 'HexnicAI (Hexnic AI) – AI Tools for Students',
+    description: 'Study smarter with HexnicAI (Hexnic AI). Includes StudyAI timetable generator, SpeakEasy accessibility tools, and FocusAI AI assistant.',
     images: ['https://hexnicai.vercel.app/preview.png'],
   },
+
   appleWebApp: {
     title: 'HexnicAI',
   },
+
   other: {
     'theme-color': '#0f172a',
   },
 }
 
+// ✅ STRUCTURED DATA (FIXED)
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "HexnicAI",
+  "alternateName": "Hexnic AI",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Web",
-  "description": "HexnicAI is an AI-powered educational platform providing StudyAI timetable generation, SpeakEasy accessibility tools, and FocusAI AI assistant.",
+  "description": "HexnicAI (Hexnic AI) is an AI-powered educational platform providing StudyAI timetable generation, SpeakEasy accessibility tools, and FocusAI AI assistant.",
   "url": "https://hexnicai.vercel.app",
-  "creator": {
-    "@type": "Organization",
-    "name": "HexnicAI"
-  },
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Aaron Thalakkottor Sooraj"
+    },
+    {
+      "@type": "Person",
+      "name": "Abhinav N"
+    },
+    {
+      "@type": "Person",
+      "name": "Adin Seby"
+    },
+    {
+      "@type": "Person",
+      "name": "Adithya Binesh"
+    },
+    {
+      "@type": "Person",
+      "name": "Akshay T S"
+    },
+    {
+      "@type": "Person",
+      "name": "Alwin Thomas V"
+    }
+  ],
   "featureList": [
     "StudyAI Smart Timetable Generator",
     "SpeakEasy Accessibility Tools",
-    "FocusAI AI Assistant (Coming Soon)",
+    "FocusAI AI Assistant",
     "AI Study Planner",
     "Text-to-Speech Learning Tools",
     "Voice-Based Learning Assistance"
   ]
 }
 
+// ✅ FAQ SCHEMA (ALREADY GOOD – SLIGHTLY OPTIMIZED)
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -90,7 +146,7 @@ const faqSchema = {
       "name": "What is HexnicAI (Hexnic AI)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HexnicAI (also known as Hexnic AI) is an AI-based personalized and inclusive learning platform designed to help students manage their studies efficiently. It offers smart tools like timetable generation, accessibility features, and AI-powered study assistance."
+        "text": "HexnicAI (also known as Hexnic AI) is an AI-based personalized and inclusive learning platform designed to help students manage their studies efficiently."
       }
     },
     {
@@ -98,7 +154,7 @@ const faqSchema = {
       "name": "How does HexnicAI help students?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HexnicAI helps students by creating optimized study schedules, improving productivity, and providing tools like voice interaction and text-to-speech. It supports better time management and personalized learning experiences."
+        "text": "HexnicAI helps students by generating smart study schedules, improving productivity, and providing accessibility tools like voice interaction and text-to-speech."
       }
     },
     {
@@ -106,7 +162,7 @@ const faqSchema = {
       "name": "What features does HexnicAI include?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HexnicAI includes an AI-powered timetable generator, balanced study scheduling, dyslexia-friendly reading interface, text-to-speech functionality, voice interaction support, and accessibility-focused learning tools."
+        "text": "HexnicAI includes an AI-powered timetable generator, dyslexia-friendly interface, text-to-speech tools, and voice-based learning support."
       }
     },
     {
@@ -114,7 +170,7 @@ const faqSchema = {
       "name": "Is HexnicAI useful for students with dyslexia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, HexnicAI is designed with inclusivity in mind. It offers dyslexia-friendly reading modes, text-to-speech features, and accessibility tools that make learning easier for students with reading difficulties."
+        "text": "Yes, HexnicAI offers accessibility tools such as dyslexia-friendly reading modes and text-to-speech features to support inclusive learning."
       }
     },
     {
@@ -122,7 +178,7 @@ const faqSchema = {
       "name": "Who developed HexnicAI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HexnicAI was developed by students of Vidya Academy of Science and Technology, including Aaron Thalakkottor Sooraj and his team."
+        "text": "HexnicAI was developed by students of Vidya Academy of Science and Technology including Aaron Thalakkottor Sooraj and his team."
       }
     }
   ]
