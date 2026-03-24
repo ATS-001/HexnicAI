@@ -124,7 +124,7 @@ const faqs = [
   },
   {
     question: "Is there any other tools?",
-    answer: "Yes, many tools will be launching soon in HexnicAI, Stay tuned...",
+    answer: "Yes, many tools will be launching soon in HexnicAI. Stay tuned...",
   },
 ]
 
