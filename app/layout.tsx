@@ -81,6 +81,53 @@ const structuredData = {
   ]
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is HexnicAI (Hexnic AI)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HexnicAI (also known as Hexnic AI) is an AI-based personalized and inclusive learning platform designed to help students manage their studies efficiently. It offers smart tools like timetable generation, accessibility features, and AI-powered study assistance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does HexnicAI help students?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HexnicAI helps students by creating optimized study schedules, improving productivity, and providing tools like voice interaction and text-to-speech. It supports better time management and personalized learning experiences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What features does HexnicAI include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HexnicAI includes an AI-powered timetable generator, balanced study scheduling, dyslexia-friendly reading interface, text-to-speech functionality, voice interaction support, and accessibility-focused learning tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is HexnicAI useful for students with dyslexia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, HexnicAI is designed with inclusivity in mind. It offers dyslexia-friendly reading modes, text-to-speech features, and accessibility tools that make learning easier for students with reading difficulties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who developed HexnicAI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HexnicAI was developed by students of Vidya Academy of Science and Technology, including Aaron Thalakkottor Sooraj and his team."
+      }
+    }
+  ]
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -92,6 +139,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className="font-sans antialiased">
