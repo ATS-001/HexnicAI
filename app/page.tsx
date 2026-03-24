@@ -111,7 +111,12 @@ const faqs = [
   },
   {
     question: "Is it free?",
-    answer: "The core modules are built to be accessible for all learners.
+    answer:
+      "The core modules are built to be accessible for all learners.",
+  },
+  {
+    question: "What is StudyAI?",
+    answer:
       "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time.",
   },
   {
