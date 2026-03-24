@@ -87,17 +87,31 @@ const team = [
 
 const faqs = [
   {
-    question: "What is HexnicAI?",
+    question: "What is HexnicAI (Hexnic AI)?",
     answer:
-      "HexnicAI is a platform that combines AI-powered study planning with accessibility tools to support personalized and inclusive learning.",
+      "HexnicAI (also known as Hexnic AI) is an AI-based personalized and inclusive learning platform designed to help students manage their studies efficiently. It offers smart tools like timetable generation, accessibility features, and AI-powered study assistance.",
+  },
+  {
+    question: "How does HexnicAI help students?",
+    answer: "HexnicAI helps students by creating optimized study schedules, improving productivity, and providing tools like voice interaction and text-to-speech. It supports better time management and personalized learning experiences.",
+  },
+  {
+    question: "What features does HexnicAI include?",
+    answer:
+      "HexnicAI includes an AI-powered timetable generator, balanced study scheduling, dyslexia-friendly reading interface, text-to-speech functionality, voice interaction support, and accessibility-focused learning tools.",
+  },
+  {
+    question: "Is HexnicAI useful for students with dyslexia?",
+    answer: "Yes, HexnicAI is designed with inclusivity in mind. It offers dyslexia-friendly reading modes, text-to-speech features, and accessibility tools that make learning easier for students with reading difficulties.",
+  },
+  {
+    question: "Who developed HexnicAI?",
+    answer:
+      "HexnicAI was developed by students of Vidya Academy of Science and Technology, including Aaron Thalakkottor Sooraj and his team.",
   },
   {
     question: "Is it free?",
-    answer: "The core modules are built to be accessible for all learners.",
-  },
-  {
-    question: "What is StudyAI?",
-    answer:
+    answer: "The core modules are built to be accessible for all learners.
       "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time.",
   },
   {
@@ -446,6 +460,89 @@ export default function HexnicAI() {
                 </div>
               </AnimatedText>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About the Creator Section */}
+      <section className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <AnimatedText animation="fade-up" className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">
+                About the Creator
+              </h2>
+              <p className="text-lg text-muted-foreground">Meet the visionary behind HexnicAI</p>
+            </AnimatedText>
+            
+            <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-8 md:p-12">
+              <div className="space-y-6">
+                <AnimatedText animation="fade-up" delay={50}>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Aaron Thalakkottor Sooraj</h3>
+                    <p className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-4">
+                      Founder & Developer of HexnicAI
+                    </p>
+                    <p className="text-muted-foreground text-base leading-relaxed">
+                      Aaron Thalakkottor Sooraj is a passionate student developer at <strong>Vidya Academy of Science and Technology</strong> who recognized the need for better AI-powered learning tools in education. As the primary architect and developer of <strong>HexnicAI (Hexnic AI)</strong>, he has spearheaded the creation of an innovative, personalized, and inclusive learning platform designed to transform how students approach their studies.
+                    </p>
+                  </div>
+                </AnimatedText>
+
+                <AnimatedText animation="fade-up" delay={100}>
+                  <div className="border-t border-border pt-6">
+                    <h4 className="font-semibold text-foreground mb-3">Involvement in HexnicAI Development</h4>
+                    <ul className="space-y-2 text-muted-foreground text-sm">
+                      <li className="flex items-start gap-3">
+                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
+                        <span><strong>Platform Architecture:</strong> Designed and built the core infrastructure of HexnicAI, ensuring scalability and accessibility for students worldwide.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
+                        <span><strong>AI Integration:</strong> Incorporated advanced AI algorithms to power StudyAI's intelligent timetable generation and personalized study recommendations.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
+                        <span><strong>Accessibility Focus:</strong> Led the initiative to create inclusive learning tools that support students with dyslexia and other learning differences.</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
+                        <span><strong>Team Leadership:</strong> Mentors a talented team of student developers working on complementary tools within the HexnicAI ecosystem.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </AnimatedText>
+
+                <AnimatedText animation="fade-up" delay={150}>
+                  <div className="border-t border-border pt-6">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Through HexnicAI, Aaron demonstrates how students can leverage artificial intelligence to create real-world solutions that benefit their peers. His work on this AI-based learning platform is a testament to the potential of student-driven innovation in education technology.
+                    </p>
+                  </div>
+                </AnimatedText>
+
+                <AnimatedText animation="fade-up" delay={200}>
+                  <div className="flex justify-center gap-4 pt-6 border-t border-border">
+                    <a
+                      href="https://www.linkedin.com/in/aaronts127pdz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg"
+                    >
+                      <Linkedin size={16} />
+                      LinkedIn
+                    </a>
+                    <a
+                      href="mailto:aaronsooraj001@gmail.com"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg"
+                    >
+                      <Mail size={16} />
+                      Email
+                    </a>
+                  </div>
+                </AnimatedText>
+              </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>
