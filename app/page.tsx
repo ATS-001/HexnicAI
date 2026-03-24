@@ -88,8 +88,7 @@ const team = [
 const faqs = [
   {
     question: "What is HexnicAI (Hexnic AI)?",
-    answer:
-      "HexnicAI (also known as Hexnic AI) is an AI-based personalized and inclusive learning platform designed to help students manage their studies efficiently. It offers smart tools like timetable generation, accessibility features, and AI-powered study assistance.",
+    answer: "HexnicAI (also known as Hexnic AI) is an AI-based personalized and inclusive learning platform designed to help students manage their studies efficiently. It offers smart tools like timetable generation, accessibility features, and AI-powered study assistance.",
   },
   {
     question: "How does HexnicAI help students?",
@@ -97,8 +96,7 @@ const faqs = [
   },
   {
     question: "What features does HexnicAI include?",
-    answer:
-      "HexnicAI includes an AI-powered timetable generator, balanced study scheduling, dyslexia-friendly reading interface, text-to-speech functionality, voice interaction support, and accessibility-focused learning tools.",
+    answer: "HexnicAI includes an AI-powered timetable generator, balanced study scheduling, dyslexia-friendly reading interface, text-to-speech functionality, voice interaction support, and accessibility-focused learning tools.",
   },
   {
     question: "Is HexnicAI useful for students with dyslexia?",
@@ -106,28 +104,23 @@ const faqs = [
   },
   {
     question: "Who developed HexnicAI?",
-    answer:
-      "HexnicAI was developed by students of Vidya Academy of Science and Technology, including Aaron Thalakkottor Sooraj and his team.",
+    answer: "HexnicAI was developed by students of Vidya Academy of Science and Technology, including Aaron Thalakkottor Sooraj and his team.",
   },
   {
     question: "Is it free?",
-    answer:
-      "The core modules are built to be accessible for all learners.",
+    answer: "The core modules are built to be accessible for all learners.",
   },
   {
     question: "What is StudyAI?",
-    answer:
-      "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time.",
+    answer: "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time.",
   },
   {
     question: "What is Speak Easy?",
-    answer:
-      "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology.",
+    answer: "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology.",
   },
   {
     question: "Who can benefit from HexnicAI?",
-    answer:
-      "Students, educators, and learners who want structured study planning or accessibility tools for learning.",
+    answer: "Students, educators, and learners who want structured study planning or accessibility tools for learning.",
   },
   {
     question: "Is there any other tools?",
