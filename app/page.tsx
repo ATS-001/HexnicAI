@@ -23,6 +23,12 @@ const modules = [
     linkText: "Explore",
   },
   {
+    title: "IT-Workshop",
+    description: "VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop",
+    link: "https://it-workshops2-2024.vercel.app/",
+    linkText: "Explore",
+  },
+  {
     title: "FocusAI",
     description: "Assistive tools designed for learning.",
     link: "#",
@@ -169,7 +175,7 @@ export default function HexnicAI() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-10000">
         <div className="relative">
           <img
             src="/logo.png"
@@ -190,7 +196,7 @@ export default function HexnicAI() {
       <BrownianMotion isDark={isDark} />
 
       {/* Navigation */}
-      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl bg-background/80 backdrop-blur-xl z-[3000] border border-border/50 rounded-2xl shadow-lg">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl bg-background/80 backdrop-blur-xl z-3000 border border-border/50 rounded-2xl shadow-lg">
         <div className="flex items-center justify-between px-6 py-3">
           <button
             onClick={scrollToTop}
@@ -307,7 +313,7 @@ export default function HexnicAI() {
             </h1>
           </AnimatedText>
           <AnimatedText animation="fade-up" delay={200}>
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full font-bold text-sm">
+            <div className="inline-block px-6 py-3 bg-linear-to-r from-blue-600 to-blue-500 text-white rounded-full font-bold text-sm">
               Smart Planning & Inclusivity
             </div>
           </AnimatedText>
@@ -394,7 +400,7 @@ export default function HexnicAI() {
             {team.map((member, i) => (
               <AnimatedCard key={member.name} delay={i * 50} className="text-left">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-linear-to-br from-blue-600 to-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
                     {member.initials}
                   </div>
                   <div>
@@ -472,7 +478,7 @@ export default function HexnicAI() {
               </h2>
               <p className="text-lg text-muted-foreground">Meet the visionary behind HexnicAI</p>
             </AnimatedText>
-            
+
             <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-8 md:p-12">
               <div className="space-y-6">
                 <AnimatedText animation="fade-up" delay={50}>
@@ -610,7 +616,7 @@ export default function HexnicAI() {
       <button
         onClick={scrollToTop}
         className={cn(
-          "fixed bottom-8 right-8 w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg z-[999]",
+          "fixed bottom-8 right-8 w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg z-999",
           "transition-all duration-300 hover:bg-blue-700 hover:scale-110 hover:-translate-y-1",
           showBackToTop
             ? "opacity-100 translate-y-0"
