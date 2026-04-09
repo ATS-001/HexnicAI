@@ -48,15 +48,16 @@ const roadmap = [
   { title: "Initial Tool (StudyAI,SpeakEasy) Release", date: "Jan 2026", direction: "right" },
   { title: "(StudyAI,SpeakEasy) Available in HexnicAI", date: "Feb 2026", direction: "left" },
   { title: "Initial Deployment of HexnicAI Prototype", date: "Feb 2026", direction: "right" },
-  { title: "FocusAI Launch", date: "Mar 2026", direction: "left" },
-  { title: "### Coming Soon ###", date: "Mar 2026", direction: "right" },
+  { title: "IT-Workshop Launch", date: "Apr 2026", direction: "left" },
+  { title: "FocusAI Launch", date: "May 2026", direction: "right" },
+  { title: "### Coming Soon ###", date: "2026", direction: "left" },
 ]
 
 const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)",
+    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {
@@ -137,6 +138,7 @@ const faqs = [
 const githubLinks = [
   { name: "StudyAI", href: "https://github.com/ATS-001/studyai-2026" },
   { name: "Speak Easy", href: "https://github.com/abhinavnixabvv-hue/speak-easy-tools" },
+  { name: "IT-Workshop", href: "https://github.com/ATS-001/IT-Workshop" }
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
