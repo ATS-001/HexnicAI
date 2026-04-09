@@ -23,6 +23,12 @@ const modules = [
     linkText: "Explore",
   },
   {
+    title: "IT-Workshop",
+    description: "VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop",
+    link: "https://it-workshops2-2024.vercel.app/",
+    linkText: "Explore",
+  },
+  {
     title: "FocusAI",
     description: "Assistive tools designed for learning.",
     link: "#",
@@ -472,7 +478,7 @@ export default function HexnicAI() {
               </h2>
               <p className="text-lg text-muted-foreground">Meet the visionary behind HexnicAI</p>
             </AnimatedText>
-            
+
             <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-8 md:p-12">
               <div className="space-y-6">
                 <AnimatedText animation="fade-up" delay={50}>
