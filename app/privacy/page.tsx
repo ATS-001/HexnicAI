@@ -7,8 +7,8 @@ import { BrownianMotion } from "@/components/brownian-motion"
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <BrownianMotion />
-      
+      <BrownianMotion isDark={false} />
+
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-4xl">
         <Link
           href="/"
