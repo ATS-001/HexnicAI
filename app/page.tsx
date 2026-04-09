@@ -138,7 +138,7 @@ const faqs = [
 const githubLinks = [
   { name: "StudyAI", href: "https://github.com/ATS-001/studyai-2026" },
   { name: "Speak Easy", href: "https://github.com/abhinavnixabvv-hue/speak-easy-tools" },
-  { name: "IT-Workshop", href: "https://github.com/ATS-001/IT-Workshop" }
+  { name: "IT-Workshop", href: "https://github.com/ATS-001/IT-Workshop" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
