@@ -29,10 +29,16 @@ const modules = [
     linkText: "Explore",
   },
   {
+    title: "C Program Master",
+    description: "Dedicated resource for C practice.",
+    link: "https://c-program-nine.vercel.app/",
+    linkText: "Explore",
+  },
+  {
     title: "FocusAI",
     description: "Assistive tools designed for learning.",
-    link: "#",
-    linkText: "Launching Soon",
+    link: "https://focusai-study-suite.vercel.app/",
+    linkText: "Explore",
   },
   {
     title: "Coming Soon",
@@ -49,8 +55,9 @@ const roadmap = [
   { title: "(StudyAI,SpeakEasy) Available in HexnicAI", date: "Feb 2026", direction: "left" },
   { title: "Initial Deployment of HexnicAI Prototype", date: "Feb 2026", direction: "right" },
   { title: "IT-Workshop Launch", date: "Apr 2026", direction: "left" },
-  { title: "FocusAI Launch", date: "May 2026", direction: "right" },
-  { title: "### Coming Soon ###", date: "2026", direction: "left" },
+  { title: "C Program Master Launch", date: "Apr 2026", direction: "right" },
+  { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
+  { title: "### Coming Soon ###", date: "2026", direction: "right" },
 ]
 
 const team = [
@@ -69,7 +76,7 @@ const team = [
   {
     initials: "AN",
     name: "Abhinav N",
-    role: "Co-Developer (Speak Easy Tools)",
+    role: "Co-Developer (Speak Easy Tools)\nDeveloper (C Program Master)",
     linkedin: "https://www.linkedin.com/in/abhinav-n-713a84383/",
   },
   {
@@ -126,6 +133,14 @@ const faqs = [
     answer: "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology.",
   },
   {
+    question: "What is IT-Workshop?",
+    answer: "IT-Workshop is a tool which includes all VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop, making it easier for students to understand. ",
+  },
+  {
+    question: "What is C Program Master?",
+    answer: "C Program Master is a tool which includes all Programming in C lab Questions.",
+  },
+  {
     question: "Who can benefit from HexnicAI?",
     answer: "Students, educators, and learners who want structured study planning or accessibility tools for learning.",
   },
@@ -139,6 +154,8 @@ const githubLinks = [
   { name: "StudyAI", href: "https://github.com/ATS-001/studyai-2026" },
   { name: "Speak Easy", href: "https://github.com/abhinavnixabvv-hue/speak-easy-tools" },
   { name: "IT-Workshop", href: "https://github.com/ATS-001/IT-Workshop" },
+  { name: "C Program Master", href: "https://github.com/abhinavnixabvv-hue/C-program" },
+  { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
