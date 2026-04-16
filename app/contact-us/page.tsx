@@ -18,13 +18,11 @@ const team = [
   {
     initials: "AN",
     name: "Abhinav N",
-    role: "Co-Developer (Speak Easy Tools)\nDeveloper (C Program Master)",
     linkedin: "https://www.linkedin.com/in/abhinav-n-713a84383/",
   },
   {
     initials: "AB",
     name: "Adithya Binesh",
-    role: "Lead & Co-Developer (Speak Easy Tools)\nDeveloper (FocusAI)",
     linkedin: "https://www.linkedin.com/in/adithya-binesh-631270388/",
   },
 ]
@@ -57,7 +55,7 @@ export default function ContactUsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <BrownianMotion />
+      <BrownianMotion isDark={false} />
 
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-6xl">
         <Link
