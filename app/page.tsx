@@ -70,7 +70,7 @@ const roadmap = [
   { title: "C Program Master Launch", date: "Apr 2026", direction: "right" },
   { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
   { title: "KTU Discrete Math Launch", date: "Apr 2026", direction: "right" },
-  { title: "CImp", date: "Apr 2026", direction: "left" },
+  { title: "CImp Launch", date: "Apr 2026", direction: "left" },
   { title: "### Coming Soon ###", date: "2026", direction: "right" },
 ]
 
@@ -428,7 +428,7 @@ export default function HexnicAI() {
                 About the Founder
               </h2>
             </AnimatedText>
-            
+
             <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 md:p-8">
               <AnimatedText animation="fade-up" delay={50}>
                 <h3 className="text-xl font-bold text-foreground mb-2">Aaron Thalakkottor Sooraj</h3>
@@ -496,7 +496,7 @@ export default function HexnicAI() {
                 About the Founder
               </h2>
             </AnimatedText>
-            
+
             <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 md:p-8">
               <AnimatedText animation="fade-up" delay={50}>
                 <h3 className="text-xl font-bold text-foreground mb-2">Aaron Thalakkottor Sooraj</h3>
