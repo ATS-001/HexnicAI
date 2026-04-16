@@ -12,18 +12,39 @@ const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
+    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
     email: "aaronsooraj001@gmail.com",
   },
   {
+    initials: "AT",
+    name: "Alwin Thomas V",
+    role: "Co-Developer (StudyAI)",
+    linkedin: "https://www.linkedin.com/in/alwin-thomas-v-033057384/",
+  },
+  {
     initials: "AN",
     name: "Abhinav N",
+    role: "Co-Developer (Speak Easy Tools)\nDeveloper (C Program Master)",
     linkedin: "https://www.linkedin.com/in/abhinav-n-713a84383/",
   },
   {
     initials: "AB",
     name: "Adithya Binesh",
+    role: "Lead & Co-Developer (Speak Easy Tools)\nDeveloper (FocusAI)",
     linkedin: "https://www.linkedin.com/in/adithya-binesh-631270388/",
+  },
+  {
+    initials: "AS",
+    name: "Adhin Seby",
+    role: "Co-Developer & Tester",
+    linkedin: "https://www.linkedin.com/in/adhin-seby-4b6b45384/",
+  },
+  {
+    initials: "AK",
+    name: "Akshay T S",
+    role: "Co-Developer & Tester",
+    linkedin: "https://www.linkedin.com/in/akshay-t-s-487b90382/",
   },
 ]
 
@@ -60,9 +81,9 @@ export default function ContactUsPage() {
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-6xl">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mb-8 text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors"
+          className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
         >
-          <ArrowLeft size={20} />
+          <ArrowLeft size={18} />
           Back to Home
         </Link>
 

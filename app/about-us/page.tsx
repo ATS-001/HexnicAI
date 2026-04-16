@@ -79,9 +79,9 @@ export default function AboutUsPage() {
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-6xl">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mb-8 text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors"
+          className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
         >
-          <ArrowLeft size={20} />
+          <ArrowLeft size={18} />
           Back to Home
         </Link>
 

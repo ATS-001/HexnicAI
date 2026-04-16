@@ -419,31 +419,6 @@ export default function HexnicAI() {
         </div>
       </section>
 
-      {/* About the Founder Section */}
-      <section className="py-16 relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <AnimatedText animation="fade-up" className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                About the Founder
-              </h2>
-            </AnimatedText>
-
-            <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 md:p-8">
-              <AnimatedText animation="fade-up" delay={50}>
-                <h3 className="text-xl font-bold text-foreground mb-2">Aaron Thalakkottor Sooraj</h3>
-                <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-3">
-                  Founder of HexnicAI | Part of ATS_PDZ
-                </p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Aaron is a student developer at Vidya Academy of Science and Technology who created HexnicAI to transform how students learn through AI-powered tools. As the architect of this innovative platform, he leads a talented team developing tools like StudyAI, Speak Easy, and FocusAI—making education more personalized and accessible for everyone.
-                </p>
-              </AnimatedText>
-            </AnimatedCard>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section id="faq" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
@@ -483,31 +458,6 @@ export default function HexnicAI() {
                 </div>
               </AnimatedText>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About the Founder Section */}
-      <section className="py-16 relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <AnimatedText animation="fade-up" className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                About the Founder
-              </h2>
-            </AnimatedText>
-
-            <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 md:p-8">
-              <AnimatedText animation="fade-up" delay={50}>
-                <h3 className="text-xl font-bold text-foreground mb-2">Aaron Thalakkottor Sooraj</h3>
-                <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-3">
-                  Founder of HexnicAI | Part of ATS_PDZ
-                </p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Aaron is a student developer at Vidya Academy of Science and Technology who created HexnicAI to transform how students learn through AI-powered tools. As the architect of this innovative platform, he leads a talented team developing tools like StudyAI, Speak Easy, and FocusAI—making education more personalized and accessible for everyone.
-                </p>
-              </AnimatedText>
-            </AnimatedCard>
           </div>
         </div>
       </section>
