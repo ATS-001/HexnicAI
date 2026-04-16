@@ -49,7 +49,7 @@ const modules = [
   {
     title: "CImp",
     description: "Dedicated resource for C Program & Theory practice",
-    link: "#",
+    link: "https://c-imp.vercel.app/",
     linkText: "Explore",
   },
   {
@@ -183,7 +183,7 @@ const githubLinks = [
   { name: "C Program Master", href: "https://github.com/abhinavnixabvv-hue/C-program" },
   { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
   { name: "KTU Discrete Math", href: "https://github.com/ATS-001/Discrete-Maths-ModelPaper24" },
-  { name: "CImp", href: "#" },
+  { name: "CImp", href: "https://github.com/ATS-001/CImp" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
