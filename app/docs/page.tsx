@@ -15,7 +15,7 @@ export default function DocsPage() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-10000">
         <div className="relative">
           <img
             src="/logo.png"
@@ -33,8 +33,8 @@ export default function DocsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <BrownianMotion />
-      
+      <BrownianMotion isDark={false} />
+
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-4xl">
         <Link
           href="/"
@@ -99,8 +99,8 @@ export default function DocsPage() {
               Beyond the main platform, we've developed educational tools to support specific learning needs.
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li><strong>IT-Workshop:</strong> VIVA & LAB exam questions for BTECH CSE courses</li>
-              <li><strong>C Program Master:</strong> Comprehensive C programming practice and resources</li>
+              <li><strong>IT-Workshop:</strong> VIVA & LAB exam questions for BTECH CSE IT Workshop</li>
+              <li><strong>C Program Master:</strong> Comprehensive C programming Lab practice and resources</li>
               <li><strong>KTU Discrete Math:</strong> Discrete mathematics study materials and problems</li>
               <li><strong>CImp:</strong> C program theory and implementation practice</li>
             </ul>
