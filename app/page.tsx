@@ -444,17 +444,6 @@ export default function HexnicAI() {
         </div>
       </section>
 
-      {/* Old Team Section - moved to /about-us */}
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </AnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section id="faq" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
