@@ -30,7 +30,7 @@ const modules = [
   },
   {
     title: "C Program Master",
-    description: "Dedicated resource for C practice.",
+    description: "Dedicated resource for C Lab practice.",
     link: "https://c-program-nine.vercel.app/",
     linkText: "Explore",
   },
@@ -38,6 +38,18 @@ const modules = [
     title: "FocusAI",
     description: "Assistive tools designed for learning.",
     link: "https://focusai-study-suite.vercel.app/",
+    linkText: "Explore",
+  },
+  {
+    title: "KTU Discrete Math",
+    description: "Assistive tools designed for learning Discrete Math.",
+    link: "https://discrete-maths-model-paper24.vercel.app/",
+    linkText: "Explore",
+  },
+  {
+    title: "CImp",
+    description: "Dedicated resource for C Program & Theory practice",
+    link: "#",
     linkText: "Explore",
   },
   {
@@ -57,6 +69,8 @@ const roadmap = [
   { title: "IT-Workshop Launch", date: "Apr 2026", direction: "left" },
   { title: "C Program Master Launch", date: "Apr 2026", direction: "right" },
   { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
+  { title: "KTU Discrete Math Launch", date: "Apr 2026", direction: "right" },
+  { title: "CImp", date: "Apr 2026", direction: "left" },
   { title: "### Coming Soon ###", date: "2026", direction: "right" },
 ]
 
@@ -64,7 +78,7 @@ const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)",
+    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {
@@ -126,19 +140,31 @@ const faqs = [
   },
   {
     question: "What is StudyAI?",
-    answer: "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time.",
+    answer: "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time. It is Developed by Aaron and Alwin",
   },
   {
     question: "What is Speak Easy?",
-    answer: "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology.",
+    answer: "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology. It developed by Adithya and Abhinav",
   },
   {
     question: "What is IT-Workshop?",
-    answer: "IT-Workshop is a tool which includes all VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop, making it easier for students to understand. ",
+    answer: "IT-Workshop is a tool which includes all VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop, making it easier for students to understand. It is Developed by Aaron",
+  },
+  {
+    question: "What is FocusAI?",
+    answer: "FocusAI is an AI-powered learning platform that helps students improve productivity, understand concepts, and manage their studies efficiently through smart tools like AI assistance, task tracking, and study analytics. It is Developed by Adithya",
   },
   {
     question: "What is C Program Master?",
-    answer: "C Program Master is a tool which includes all Programming in C lab Questions.",
+    answer: "C Program Master is a tool which includes all Programming in C lab Questions. It is Developed by Abhinav",
+  },
+  {
+    question: "What is KTU Discrete Math?",
+    answer: "KTU Discrete Math is a tool which includes all Exam Questions of BTECH CSE Semester 2 Discrete Maths, making it easier for students to understand. It is Developed by Aaron",
+  },
+  {
+    question: "What is CImp?",
+    answer: "CImp is a tool which includes all Exam Questions of BTECH CSE Semester 2 Programming in C, making it easier for students to understand. It is Developed by Aaron",
   },
   {
     question: "Who can benefit from HexnicAI?",
@@ -156,6 +182,8 @@ const githubLinks = [
   { name: "IT-Workshop", href: "https://github.com/ATS-001/IT-Workshop" },
   { name: "C Program Master", href: "https://github.com/abhinavnixabvv-hue/C-program" },
   { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
+  { name: "KTU Discrete Math", href: "https://github.com/ATS-001/Discrete-Maths-ModelPaper24" },
+  { name: "CImp", href: "#" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
