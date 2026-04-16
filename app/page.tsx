@@ -30,7 +30,7 @@ const modules = [
   },
   {
     title: "C Program Master",
-    description: "Dedicated resource for C practice.",
+    description: "Dedicated resource for C Lab practice.",
     link: "https://c-program-nine.vercel.app/",
     linkText: "Explore",
   },
@@ -38,6 +38,18 @@ const modules = [
     title: "FocusAI",
     description: "Assistive tools designed for learning.",
     link: "https://focusai-study-suite.vercel.app/",
+    linkText: "Explore",
+  },
+  {
+    title: "KTU Discrete Math",
+    description: "Assistive tools designed for learning Discrete Math.",
+    link: "https://discrete-maths-model-paper24.vercel.app/",
+    linkText: "Explore",
+  },
+  {
+    title: "CImp",
+    description: "Dedicated resource for C Program & Theory practice",
+    link: "https://c-imp.vercel.app/",
     linkText: "Explore",
   },
   {
@@ -57,6 +69,8 @@ const roadmap = [
   { title: "IT-Workshop Launch", date: "Apr 2026", direction: "left" },
   { title: "C Program Master Launch", date: "Apr 2026", direction: "right" },
   { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
+  { title: "KTU Discrete Math Launch", date: "Apr 2026", direction: "right" },
+  { title: "CImp Launch", date: "Apr 2026", direction: "left" },
   { title: "### Coming Soon ###", date: "2026", direction: "right" },
 ]
 
@@ -64,7 +78,7 @@ const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)",
+    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {
@@ -126,19 +140,31 @@ const faqs = [
   },
   {
     question: "What is StudyAI?",
-    answer: "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time.",
+    answer: "StudyAI is a smart planner that uses AI concepts to organize study schedules based on subject difficulty and available time. It is Developed by Aaron and Alwin",
   },
   {
     question: "What is Speak Easy?",
-    answer: "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology.",
+    answer: "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology. It developed by Adithya and Abhinav",
   },
   {
     question: "What is IT-Workshop?",
-    answer: "IT-Workshop is a tool which includes all VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop, making it easier for students to understand. ",
+    answer: "IT-Workshop is a tool which includes all VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop, making it easier for students to understand. It is Developed by Aaron",
+  },
+  {
+    question: "What is FocusAI?",
+    answer: "FocusAI is an AI-powered learning platform that helps students improve productivity, understand concepts, and manage their studies efficiently through smart tools like AI assistance, task tracking, and study analytics. It is Developed by Adithya",
   },
   {
     question: "What is C Program Master?",
-    answer: "C Program Master is a tool which includes all Programming in C lab Questions.",
+    answer: "C Program Master is a tool which includes all Programming in C lab Questions. It is Developed by Abhinav",
+  },
+  {
+    question: "What is KTU Discrete Math?",
+    answer: "KTU Discrete Math is a tool which includes all Exam Questions of BTECH CSE Semester 2 Discrete Maths, making it easier for students to understand. It is Developed by Aaron",
+  },
+  {
+    question: "What is CImp?",
+    answer: "CImp is a tool which includes all Exam Questions of BTECH CSE Semester 2 Programming in C, making it easier for students to understand. It is Developed by Aaron",
   },
   {
     question: "Who can benefit from HexnicAI?",
@@ -156,6 +182,8 @@ const githubLinks = [
   { name: "IT-Workshop", href: "https://github.com/ATS-001/IT-Workshop" },
   { name: "C Program Master", href: "https://github.com/abhinavnixabvv-hue/C-program" },
   { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
+  { name: "KTU Discrete Math", href: "https://github.com/ATS-001/Discrete-Maths-ModelPaper24" },
+  { name: "CImp", href: "https://github.com/ATS-001/CImp" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
@@ -241,13 +269,17 @@ export default function HexnicAI() {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-2">
-            {["Modules", "Roadmap", "Team", "FAQ"].map((item) => (
+            {[
+              { label: "Modules", href: "/modules" },
+              { label: "About Us", href: "/about-us" },
+              { label: "Contact", href: "/contact-us" },
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className="px-4 py-2 rounded-lg font-semibold text-sm hover:bg-accent transition-all duration-300 hover:-translate-y-0.5"
               >
-                {item}
+                {item.label}
               </a>
             ))}
             <button
@@ -285,14 +317,18 @@ export default function HexnicAI() {
           {/* Mobile navigation */}
           {isMenuOpen && (
             <div className="absolute top-full right-[5%] mt-2 bg-card border border-border rounded-xl shadow-2xl p-4 w-56 md:hidden animate-in fade-in slide-in-from-top-2 duration-200">
-              {["Modules", "Roadmap", "Team", "FAQ"].map((item) => (
+              {[
+                { label: "Modules", href: "/modules" },
+                { label: "About Us", href: "/about-us" },
+                { label: "Contact", href: "/contact-us" },
+              ].map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.label}
+                  href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="block px-4 py-3 rounded-lg font-semibold hover:bg-accent transition-colors"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
               <button
@@ -336,30 +372,6 @@ export default function HexnicAI() {
               Smart Planning & Inclusivity
             </div>
           </AnimatedText>
-        </div>
-      </section>
-
-      {/* Modules Section */}
-      <section id="modules" className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <AnimatedText animation="fade-up" className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
-              Our Modules
-            </h2>
-          </AnimatedText>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {modules.map((module, i) => (
-              <AnimatedCard key={module.title} delay={i * 100}>
-                <h3 className="text-xl font-bold mb-3">{module.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                  {module.description}
-                </p>
-                {module.link && (
-                  <AnimatedButton href={module.link}>{module.linkText}</AnimatedButton>
-                )}
-              </AnimatedCard>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -407,43 +419,6 @@ export default function HexnicAI() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <AnimatedText animation="fade-up" className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
-              Built by <strong>Students</strong> from <strong>VAST</strong>
-            </h2>
-          </AnimatedText>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {team.map((member, i) => (
-              <AnimatedCard key={member.name} delay={i * 50} className="text-left">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-linear-to-br from-blue-600 to-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    {member.initials}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-sm">{member.name}</h3>
-                    <p className="text-muted-foreground text-xs whitespace-pre-line mt-1">
-                      {member.role}
-                    </p>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 text-xs font-semibold mt-2 hover:underline transition-all duration-300 hover:gap-2"
-                    >
-                      <Linkedin size={14} />
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </AnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section id="faq" className="py-24 relative z-10">
         <div className="container mx-auto px-4">
@@ -483,89 +458,6 @@ export default function HexnicAI() {
                 </div>
               </AnimatedText>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About the Creator Section */}
-      <section className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <AnimatedText animation="fade-up" className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">
-                About the Creator
-              </h2>
-              <p className="text-lg text-muted-foreground">Meet the visionary behind HexnicAI</p>
-            </AnimatedText>
-
-            <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-8 md:p-12">
-              <div className="space-y-6">
-                <AnimatedText animation="fade-up" delay={50}>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Aaron Thalakkottor Sooraj</h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-4">
-                      Founder & Developer of HexnicAI
-                    </p>
-                    <p className="text-muted-foreground text-base leading-relaxed">
-                      Aaron Thalakkottor Sooraj is a passionate student developer at <strong>Vidya Academy of Science and Technology</strong> who recognized the need for better AI-powered learning tools in education. As the primary architect and developer of <strong>HexnicAI (Hexnic AI)</strong>, he has spearheaded the creation of an innovative, personalized, and inclusive learning platform designed to transform how students approach their studies.
-                    </p>
-                  </div>
-                </AnimatedText>
-
-                <AnimatedText animation="fade-up" delay={100}>
-                  <div className="border-t border-border pt-6">
-                    <h4 className="font-semibold text-foreground mb-3">Involvement in HexnicAI Development</h4>
-                    <ul className="space-y-2 text-muted-foreground text-sm">
-                      <li className="flex items-start gap-3">
-                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
-                        <span><strong>Platform Architecture:</strong> Designed and built the core infrastructure of HexnicAI, ensuring scalability and accessibility for students worldwide.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
-                        <span><strong>AI Integration:</strong> Incorporated advanced AI algorithms to power StudyAI's intelligent timetable generation and personalized study recommendations.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
-                        <span><strong>Accessibility Focus:</strong> Led the initiative to create inclusive learning tools that support students with dyslexia and other learning differences.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-blue-600 dark:text-blue-400 font-bold mt-0.5">•</span>
-                        <span><strong>Team Leadership:</strong> Mentors a talented team of student developers working on complementary tools within the HexnicAI ecosystem.</span>
-                      </li>
-                    </ul>
-                  </div>
-                </AnimatedText>
-
-                <AnimatedText animation="fade-up" delay={150}>
-                  <div className="border-t border-border pt-6">
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      Through HexnicAI, Aaron demonstrates how students can leverage artificial intelligence to create real-world solutions that benefit their peers. His work on this AI-based learning platform is a testament to the potential of student-driven innovation in education technology.
-                    </p>
-                  </div>
-                </AnimatedText>
-
-                <AnimatedText animation="fade-up" delay={200}>
-                  <div className="flex justify-center gap-4 pt-6 border-t border-border">
-                    <a
-                      href="https://www.linkedin.com/in/aaronts127pdz/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg"
-                    >
-                      <Linkedin size={16} />
-                      LinkedIn
-                    </a>
-                    <a
-                      href="mailto:aaronsooraj001@gmail.com"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg"
-                    >
-                      <Mail size={16} />
-                      Email
-                    </a>
-                  </div>
-                </AnimatedText>
-              </div>
-            </AnimatedCard>
           </div>
         </div>
       </section>
