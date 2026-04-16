@@ -269,13 +269,19 @@ export default function HexnicAI() {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-2">
-            {["Modules", "Roadmap", "Team", "FAQ"].map((item) => (
+            {[
+              { label: "Modules", href: "/modules" },
+              { label: "Roadmap", href: "#roadmap" },
+              { label: "About Us", href: "/about-us" },
+              { label: "Contact", href: "/contact-us" },
+              { label: "FAQ", href: "#faq" },
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className="px-4 py-2 rounded-lg font-semibold text-sm hover:bg-accent transition-all duration-300 hover:-translate-y-0.5"
               >
-                {item}
+                {item.label}
               </a>
             ))}
             <button

@@ -1,10 +1,36 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { BrownianMotion } from "@/components/brownian-motion"
 
 export default function TermsPage() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+        <div className="relative">
+          <img
+            src="/logo.png"
+            alt="HexnicAI Logo"
+            className="w-24 h-24 object-contain animate-pulse"
+          />
+          <div className="absolute inset-0 rounded-full bg-blue-500/20 animate-ping" />
+        </div>
+        <p className="mt-6 text-lg font-semibold text-blue-600 dark:text-blue-400 animate-pulse">
+          Loading Terms of Service...
+        </p>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <BrownianMotion />
