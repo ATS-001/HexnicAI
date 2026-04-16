@@ -33,10 +33,16 @@ const team = [
     linkedin: "https://www.linkedin.com/in/adithya-binesh-631270388/",
   },
   {
-    initials: "AJ",
-    name: "Adithya Jayakrishnan",
-    role: "Co-Developer (FocusAI)",
-    linkedin: "https://www.linkedin.com/in/adithya-jayakrishnan-92a46b338/",
+    initials: "AS",
+    name: "Adhin Seby",
+    role: "Co-Developer & Tester",
+    linkedin: "https://www.linkedin.com/in/adhin-seby-4b6b45384/",
+  },
+  {
+    initials: "AK",
+    name: "Akshay T S",
+    role: "Co-Developer & Tester",
+    linkedin: "https://www.linkedin.com/in/akshay-t-s-487b90382/",
   },
 ]
 
