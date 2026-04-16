@@ -88,7 +88,7 @@ export default function ModulesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <BrownianMotion />
-
+      
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-6xl">
         <Link
           href="/"
@@ -97,6 +97,11 @@ export default function ModulesPage() {
           <ArrowLeft size={20} />
           Back to Home
         </Link>
+
+        <AnimatedText animation="fade-up" className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">Our Modules</h1>
+          <p className="text-lg text-muted-foreground">Explore all the tools we've built for smarter learning</p>
+        </AnimatedText>
 
         <AnimatedText animation="fade-up" className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400">

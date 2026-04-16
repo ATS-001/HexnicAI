@@ -97,28 +97,27 @@ export default function ContactUsPage() {
               key={index}
               animation="fade-up"
               delay={index * 50}
-              className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 rounded-xl text-center"
+              className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 rounded-xl"
             >
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
-                {member.initials}
-              </div>
               <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
               <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-4">{member.role}</p>
-              <div className="flex gap-2 justify-center">
+              <div className="flex gap-2">
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white hover:bg-blue-700 rounded-full transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-3 py-2 bg-blue-600 text-white hover:bg-blue-700 rounded-full text-sm font-semibold transition-all duration-300"
                 >
-                  <Linkedin size={18} />
+                  <Linkedin size={16} />
+                  LinkedIn
                 </a>
                 {member.email && (
                   <a
                     href={`mailto:${member.email}`}
-                    className="inline-flex items-center justify-center w-10 h-10 bg-slate-700 hover:bg-slate-600 text-white rounded-full transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-3 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-full text-sm font-semibold transition-all duration-300"
                   >
-                    <Mail size={18} />
+                    <Mail size={16} />
+                    Email
                   </a>
                 )}
               </div>
