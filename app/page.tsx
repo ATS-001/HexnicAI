@@ -317,14 +317,18 @@ export default function HexnicAI() {
           {/* Mobile navigation */}
           {isMenuOpen && (
             <div className="absolute top-full right-[5%] mt-2 bg-card border border-border rounded-xl shadow-2xl p-4 w-56 md:hidden animate-in fade-in slide-in-from-top-2 duration-200">
-              {["Modules", "Roadmap", "Team", "FAQ"].map((item) => (
+              {[
+                { label: "Modules", href: "/modules" },
+                { label: "About Us", href: "/about-us" },
+                { label: "Contact", href: "/contact-us" },
+              ].map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.label}
+                  href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="block px-4 py-3 rounded-lg font-semibold hover:bg-accent transition-colors"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
               <button
@@ -368,30 +372,6 @@ export default function HexnicAI() {
               Smart Planning & Inclusivity
             </div>
           </AnimatedText>
-        </div>
-      </section>
-
-      {/* Modules Section */}
-      <section id="modules" className="py-24 relative z-10">
-        <div className="container mx-auto px-4">
-          <AnimatedText animation="fade-up" className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
-              Our Modules
-            </h2>
-          </AnimatedText>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {modules.map((module, i) => (
-              <AnimatedCard key={module.title} delay={i * 100}>
-                <h3 className="text-xl font-bold mb-3">{module.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                  {module.description}
-                </p>
-                {module.link && (
-                  <AnimatedButton href={module.link}>{module.linkText}</AnimatedButton>
-                )}
-              </AnimatedCard>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -439,33 +419,32 @@ export default function HexnicAI() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="py-24 relative z-10">
+      {/* About the Founder Section */}
+      <section className="py-16 relative z-10">
         <div className="container mx-auto px-4">
-          <AnimatedText animation="fade-up" className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
-              Built by <strong>Students</strong> from <strong>VAST</strong>
-            </h2>
-          </AnimatedText>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {team.map((member, i) => (
-              <AnimatedCard key={member.name} delay={i * 50} className="text-left">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-linear-to-br from-blue-600 to-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    {member.initials}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-sm">{member.name}</h3>
-                    <p className="text-muted-foreground text-xs whitespace-pre-line mt-1">
-                      {member.role}
-                    </p>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 text-xs font-semibold mt-2 hover:underline transition-all duration-300 hover:gap-2"
-                    >
-                      <Linkedin size={14} />
+          <div className="max-w-2xl mx-auto">
+            <AnimatedText animation="fade-up" className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                About the Founder
+              </h2>
+            </AnimatedText>
+            
+            <AnimatedCard className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 md:p-8">
+              <AnimatedText animation="fade-up" delay={50}>
+                <h3 className="text-xl font-bold text-foreground mb-2">Aaron Thalakkottor Sooraj</h3>
+                <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-3">
+                  Founder of HexnicAI | Part of ATS_PDZ
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Aaron is a student developer at Vidya Academy of Science and Technology who created HexnicAI to transform how students learn through AI-powered tools. As the architect of this innovative platform, he leads a talented team developing tools like StudyAI, Speak Easy, and FocusAI—making education more personalized and accessible for everyone.
+                </p>
+              </AnimatedText>
+            </AnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Old Team Section - moved to /about-us */}
                       LinkedIn
                     </a>
                   </div>
