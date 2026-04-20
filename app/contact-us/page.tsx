@@ -52,7 +52,7 @@ export default function ContactUsPage() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-10000">
         <div className="relative">
           <img
             src="/logo.png"
