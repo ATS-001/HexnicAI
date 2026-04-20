@@ -100,7 +100,7 @@ export default function ContactUsPage() {
               className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 rounded-xl"
             >
               <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-4">{member.role}</p>
+              <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-4"></p>
               <div className="flex gap-2">
                 <a
                   href={member.linkedin}
