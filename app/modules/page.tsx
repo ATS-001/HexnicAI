@@ -48,7 +48,7 @@ const modules = [
   {
     title: "CImp",
     description: "Dedicated resource for C Program & Theory practice",
-    link: "#",
+    link: "https://c-imp.vercel.app/",
     linkText: "Explore",
   },
   {
@@ -99,17 +99,8 @@ export default function ModulesPage() {
         </Link>
 
         <AnimatedText animation="fade-up" className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">Our Modules</h1>
-          <p className="text-lg text-muted-foreground">Explore all the tools we've built for smarter learning</p>
-        </AnimatedText>
-
-        <AnimatedText animation="fade-up" className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400">
-            Our Modules
-          </h1>
-          <p className="text-muted-foreground text-lg mt-3">
-            Explore all the AI-powered tools and resources available in the HexnicAI ecosystem.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">Our Modules</h1>
+          <p className="text-lg text-muted-foreground">Explore all the AI-powered tools and resources available in the HexnicAI ecosystem</p>
         </AnimatedText>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

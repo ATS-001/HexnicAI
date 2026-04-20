@@ -12,38 +12,32 @@ const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
     email: "aaronsooraj001@gmail.com",
   },
   {
     initials: "AT",
     name: "Alwin Thomas V",
-    role: "Co-Developer (StudyAI)",
     linkedin: "https://www.linkedin.com/in/alwin-thomas-v-033057384/",
   },
   {
     initials: "AN",
     name: "Abhinav N",
-    role: "Co-Developer (Speak Easy Tools)\nDeveloper (C Program Master)",
     linkedin: "https://www.linkedin.com/in/abhinav-n-713a84383/",
   },
   {
     initials: "AB",
     name: "Adithya Binesh",
-    role: "Lead & Co-Developer (Speak Easy Tools)\nDeveloper (FocusAI)",
     linkedin: "https://www.linkedin.com/in/adithya-binesh-631270388/",
   },
   {
     initials: "AS",
     name: "Adhin Seby",
-    role: "Co-Developer & Tester",
     linkedin: "https://www.linkedin.com/in/adhin-seby-4b6b45384/",
   },
   {
     initials: "AK",
     name: "Akshay T S",
-    role: "Co-Developer & Tester",
     linkedin: "https://www.linkedin.com/in/akshay-t-s-487b90382/",
   },
 ]
@@ -58,7 +52,7 @@ export default function ContactUsPage() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-10000">
         <div className="relative">
           <img
             src="/logo.png"
@@ -106,7 +100,7 @@ export default function ContactUsPage() {
               className="bg-card/80 dark:bg-card/60 backdrop-blur-sm border border-border/50 p-6 rounded-xl"
             >
               <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-4">{member.role}</p>
+              <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold mb-4"></p>
               <div className="flex gap-2">
                 <a
                   href={member.linkedin}
