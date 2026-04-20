@@ -7,9 +7,10 @@ interface AnimatedCardProps {
   children: React.ReactNode
   className?: string
   delay?: number
+  animation?: "fade-up" | "fade-down" | "fade-left" | "fade-right" | "zoom-in" | "blur-in"
 }
 
-export function AnimatedCard({ children, className, delay = 0 }: AnimatedCardProps) {
+export function AnimatedCard({ children, className, delay = 0, animation = "fade-up" }: AnimatedCardProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)

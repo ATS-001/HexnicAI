@@ -86,11 +86,14 @@ export default function DocsPage() {
           <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
             <h2 className="text-2xl font-bold mb-4">FocusAI</h2>
             <p className="text-muted-foreground mb-4">
-              Coming soon - Assistive tools designed to help you maintain focus and improve learning outcomes with AI-powered recommendations.
+              Assistive tools designed to help you maintain focus and improve learning outcomes with AI-powered recommendations.
             </p>
-            <p className="text-muted-foreground">
-              Stay tuned for advanced focus-enhancing features and AI-powered study assistance.
-            </p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li>Focus-enhancing features for better concentration</li>
+              <li>AI-powered study assistance and guidance</li>
+              <li>Personalized learning recommendations</li>
+              <li>Progress tracking and performance insights</li>
+            </ul>
           </section>
 
           <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">

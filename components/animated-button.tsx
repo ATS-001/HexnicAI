@@ -74,19 +74,20 @@ export function AnimatedButton({
       {/* Ripple effect */}
       {ripple && (
         <span
-          className="absolute rounded-full bg-white/30 animate-[ripple_0.6s_linear]"
+          className="absolute rounded-full bg-white/30 pointer-events-none"
           style={{
             left: ripple.x,
             top: ripple.y,
             width: 10,
             height: 10,
             transform: "translate(-50%, -50%)",
+            animation: "ripple 0.6s linear",
           }}
         />
       )}
       
       {/* Shimmer effect */}
-      <span className="absolute inset-0 -translate-x-full hover:animate-[shimmer_1s_ease-in-out] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      <span className="absolute inset-0 -translate-x-full group-hover:animate-pulse bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       
       <span className="relative z-10 inline-flex items-center justify-center gap-2">{children}</span>
     </Component>
