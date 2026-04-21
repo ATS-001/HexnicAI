@@ -225,15 +225,28 @@ export default function HexnicAI() {
   if (isLoading) {
     return (
       <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-10000">
-        <div className="relative">
+        <div className="relative w-24 h-24">
           <img
             src="/logo.png"
             alt="HexnicAI Logo"
-            className="w-24 h-24 object-contain animate-pulse"
+            className="w-24 h-24 object-contain"
+            style={{
+              animation: "float 3s ease-in-out infinite",
+            }}
           />
-          <div className="absolute inset-0 rounded-full bg-blue-500/20 animate-ping" />
+          <div
+            className="absolute inset-0 rounded-full bg-blue-500/30"
+            style={{
+              animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            }}
+          />
         </div>
-        <p className="mt-6 text-lg font-semibold text-blue-600 dark:text-blue-400 animate-pulse">
+        <p
+          className="mt-8 text-lg font-semibold text-blue-600 dark:text-blue-400"
+          style={{
+            animation: "fadeInOut 2s ease-in-out infinite",
+          }}
+        >
           Loading HexnicAI...
         </p>
       </div>
