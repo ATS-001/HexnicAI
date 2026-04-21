@@ -71,14 +71,15 @@ const roadmap = [
   { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
   { title: "KTU Discrete Math Launch", date: "Apr 2026", direction: "right" },
   { title: "CImp Launch", date: "Apr 2026", direction: "left" },
-  { title: "### Coming Soon ###", date: "2026", direction: "right" },
+  { title: "EEIPR Launch", date: "Apr 2026", direction: "right" },
+  { title: "### Coming Soon ###", date: "2026", direction: "left" },
 ]
 
 const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)",
+    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)\nDeveloper (EEIPR)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {
@@ -184,6 +185,7 @@ const githubLinks = [
   { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
   { name: "KTU Discrete Math", href: "https://github.com/ATS-001/Discrete-Maths-ModelPaper24" },
   { name: "CImp", href: "https://github.com/ATS-001/CImp" },
+  { name: "EEIPR", href: "https://github.com/ATS-001/EEIPR" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
