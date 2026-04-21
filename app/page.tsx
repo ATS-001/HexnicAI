@@ -329,6 +329,53 @@ export default function HexnicAI() {
             </span>
           </button>
 
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {[
+              { label: "Modules", href: "/modules" },
+              { label: "About Us", href: "/about-us" },
+              { label: "Contact", href: "/contact-us" },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="font-semibold text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+              >
+                {item.label}
+              </a>
+            ))}
+            
+            {/* Desktop Dark Mode Toggle */}
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="p-2 rounded-lg hover:bg-accent transition-colors duration-300"
+              title={isDark ? "Light Mode" : "Dark Mode"}
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
+            {/* Desktop GitHub Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-2 font-semibold text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                <Github size={18} />
+                Repos
+              </button>
+              <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-xl shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                {githubLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-3 py-2 text-sm rounded-lg hover:bg-accent transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
