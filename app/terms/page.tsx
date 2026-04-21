@@ -58,7 +58,7 @@ export default function TermsPage() {
           <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
             <h2 className="text-2xl font-bold mb-4">2. Description of Service</h2>
             <p className="text-muted-foreground">
-              HexnicAI provides AI-powered educational tools including StudyAI, Speak Easy, and other learning modules. These services are designed to enhance personalized and inclusive learning experiences.
+              HexnicAI provides AI-powered educational tools including StudyAI, Speak Easy, FocusAI, IT-Workshop, C Program Master, KTU Discrete Math, CImp, EEIPR, and other learning modules. These services are designed to enhance personalized and inclusive learning experiences.
             </p>
           </section>
 

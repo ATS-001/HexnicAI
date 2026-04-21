@@ -122,6 +122,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  a, button {
+    @apply transition-all duration-300 ease-out;
+  }
 }
 
 /* Custom animations */
@@ -167,5 +171,32 @@
   }
   50% {
     box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
   }
 }

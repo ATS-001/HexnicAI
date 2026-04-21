@@ -11,7 +11,7 @@ const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)",
+    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)\nDeveloper (EEIPR)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {

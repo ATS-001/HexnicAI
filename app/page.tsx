@@ -6,7 +6,7 @@ import { Typewriter } from "@/components/typewriter"
 import { AnimatedCard } from "@/components/animated-card"
 import { AnimatedButton } from "@/components/animated-button"
 import { AnimatedText, StaggeredText } from "@/components/animated-text"
-import { Menu, X, ChevronUp, Moon, Sun, Github, Linkedin, Mail } from "lucide-react"
+import { Menu, X, ChevronUp, ChevronDown, Moon, Sun, Github, Linkedin, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const modules = [
@@ -71,14 +71,15 @@ const roadmap = [
   { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
   { title: "KTU Discrete Math Launch", date: "Apr 2026", direction: "right" },
   { title: "CImp Launch", date: "Apr 2026", direction: "left" },
-  { title: "### Coming Soon ###", date: "2026", direction: "right" },
+  { title: "EEIPR Launch", date: "Apr 2026", direction: "right" },
+  { title: "### Coming Soon ###", date: "2026", direction: "left" },
 ]
 
 const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)",
+    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)\nDeveloper (EEIPR)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {
@@ -172,7 +173,11 @@ const faqs = [
   },
   {
     question: "Is there any other tools?",
-    answer: "Yes, many tools will be launching soon in HexnicAI. Stay tuned...",
+    answer: "Yes, many tools will be launching soon in HexnicAI, Stay tuned...",
+  },
+  {
+    question: "What is EEIPR?",
+    answer: "EEIPR (Engineering, Entrepreneurship and Intellectual Property Rights) is a KTU-indexed learning resources repository providing comprehensive study materials and documentation for engineering students.",
   },
 ]
 
@@ -184,6 +189,7 @@ const githubLinks = [
   { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
   { name: "KTU Discrete Math", href: "https://github.com/ATS-001/Discrete-Maths-ModelPaper24" },
   { name: "CImp", href: "https://github.com/ATS-001/CImp" },
+  { name: "EEIPR", href: "https://github.com/ATS-001/EEIPR" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
@@ -216,24 +222,88 @@ export default function HexnicAI() {
     }
   }, [isDark])
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const menuButton = document.querySelector("[data-menu-button]")
+      const menuContent = document.querySelector("[data-menu-content]")
+      if (isMenuOpen && menuButton && menuContent && !menuButton.contains(e.target as Node) && !menuContent.contains(e.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+    document.addEventListener("click", handleClickOutside)
+    return () => document.removeEventListener("click", handleClickOutside)
+  }, [isMenuOpen])
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-10000">
-        <div className="relative">
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+        {/* Logo with animated container */}
+        <div className="relative mb-8">
+          {/* Spinning outer ring */}
+          <div
+            className="absolute inset-0 w-32 h-32 rounded-full border-4 border-transparent border-t-blue-600 border-r-blue-400"
+            style={{
+              animation: "spin 2s linear infinite",
+            }}
+          />
+          {/* Logo */}
           <img
             src="/logo.png"
-            alt="HexnicAI Logo"
-            className="w-24 h-24 object-contain animate-pulse"
+            alt="HexnicAI"
+            className="w-32 h-32 object-contain relative z-10"
           />
-          <div className="absolute inset-0 rounded-full bg-blue-500/20 animate-ping" />
+          {/* Glow effect */}
+          <div
+            className="absolute inset-0 w-32 h-32 rounded-full bg-blue-600/20 blur-lg"
+            style={{
+              animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            }}
+          />
         </div>
-        <p className="mt-6 text-lg font-semibold text-blue-600 dark:text-blue-400 animate-pulse">
-          Loading HexnicAI...
-        </p>
+
+        {/* Loading text with animated dots */}
+        <div className="flex items-center gap-2">
+          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+            Loading HexnicAI
+          </p>
+          <div className="flex gap-1.5">
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full"
+              style={{
+                animation: "bounce 1.4s infinite",
+                animationDelay: "0s",
+              }}
+            />
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full"
+              style={{
+                animation: "bounce 1.4s infinite",
+                animationDelay: "0.2s",
+              }}
+            />
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full"
+              style={{
+                animation: "bounce 1.4s infinite",
+                animationDelay: "0.4s",
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Progress indicator */}
+        <div className="mt-8 w-64 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-blue-600 rounded-full"
+            style={{
+              animation: "shimmer 1.5s ease-in-out infinite",
+            }}
+          />
+        </div>
       </div>
     )
   }
@@ -259,16 +329,8 @@ export default function HexnicAI() {
             </span>
           </button>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-
-          {/* Desktop navigation */}
-          <div className="hidden md:flex items-center gap-2">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
             {[
               { label: "Modules", href: "/modules" },
               { label: "About Us", href: "/about-us" },
@@ -277,46 +339,55 @@ export default function HexnicAI() {
               <a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 rounded-lg font-semibold text-sm hover:bg-accent transition-all duration-300 hover:-translate-y-0.5"
+                className="font-semibold text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
                 {item.label}
               </a>
             ))}
+            
+            {/* Desktop Dark Mode Toggle */}
             <button
               onClick={() => setIsDark(!isDark)}
-              className="p-2 rounded-lg hover:bg-accent transition-all duration-300 hover:scale-110"
+              className="p-2 rounded-lg hover:bg-accent transition-colors duration-300"
+              title={isDark ? "Light Mode" : "Dark Mode"}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <div className="relative">
-              <button
-                onClick={() => setIsGithubOpen(!isGithubOpen)}
-                className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-full text-sm font-semibold hover:opacity-90 transition-all duration-300 hover:-translate-y-0.5"
-              >
+
+            {/* Desktop GitHub Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-2 font-semibold text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
                 <Github size={18} />
-                GitHub
+                Repos
               </button>
-              {isGithubOpen && (
-                <div className="absolute right-0 top-full mt-2 bg-card border border-border rounded-xl shadow-2xl overflow-hidden min-w-[180px] animate-in fade-in slide-in-from-top-2 duration-200">
-                  {githubLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-4 py-3 text-sm font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-xl shadow-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                {githubLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-3 py-2 text-sm rounded-lg hover:bg-accent transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden"
+            data-menu-button
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
           {/* Mobile navigation */}
           {isMenuOpen && (
-            <div className="absolute top-full right-[5%] mt-2 bg-card border border-border rounded-xl shadow-2xl p-4 w-56 md:hidden animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute top-full right-[5%] mt-2 bg-card border border-border rounded-xl shadow-2xl p-4 w-56 md:hidden animate-in fade-in slide-in-from-top-2 duration-200" data-menu-content>
               {[
                 { label: "Modules", href: "/modules" },
                 { label: "About Us", href: "/about-us" },
@@ -339,17 +410,34 @@ export default function HexnicAI() {
                 {isDark ? "Light Mode" : "Dark Mode"}
               </button>
               <div className="border-t border-border mt-2 pt-2">
-                {githubLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm hover:bg-accent transition-colors rounded-lg"
-                  >
-                    {link.name}
-                  </a>
-                ))}
+                <button
+                  onClick={() => setIsGithubOpen(!isGithubOpen)}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg font-semibold hover:bg-accent transition-colors"
+                >
+                  <span className="flex items-center gap-2">
+                    <Github size={18} />
+                    Repositories
+                  </span>
+                  <ChevronDown
+                    size={18}
+                    className={`transition-transform duration-300 ${isGithubOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {isGithubOpen && (
+                  <div className="mt-2 space-y-1 animate-in fade-in slide-in-from-top-2 duration-200">
+                    {githubLinks.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 text-sm hover:bg-accent transition-colors rounded-lg ml-4"
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           )}
