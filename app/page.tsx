@@ -240,89 +240,69 @@ export default function HexnicAI() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-gradient-to-b from-background via-blue-50/5 to-background flex flex-col items-center justify-center z-[10000] overflow-hidden">
-        {/* Animated background particles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full bg-blue-500/20"
-              style={{
-                width: Math.random() * 200 + 100 + "px",
-                height: Math.random() * 200 + 100 + "px",
-                left: Math.random() * 100 + "%",
-                top: Math.random() * 100 + "%",
-                animation: `float ${5 + i}s ease-in-out infinite`,
-                animationDelay: `${i * 0.5}s`,
-                filter: "blur(40px)",
-              }}
-            />
-          ))}
+      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-[10000]">
+        {/* Logo with animated container */}
+        <div className="relative mb-8">
+          {/* Spinning outer ring */}
+          <div
+            className="absolute inset-0 w-32 h-32 rounded-full border-4 border-transparent border-t-blue-600 border-r-blue-400"
+            style={{
+              animation: "spin 2s linear infinite",
+            }}
+          />
+          {/* Logo */}
+          <img
+            src="/logo.png"
+            alt="HexnicAI"
+            className="w-32 h-32 object-contain relative z-10"
+          />
+          {/* Glow effect */}
+          <div
+            className="absolute inset-0 w-32 h-32 rounded-full bg-blue-600/20 blur-lg"
+            style={{
+              animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            }}
+          />
         </div>
 
-        {/* Main content */}
-        <div className="relative z-10 flex flex-col items-center">
-          {/* Logo container with multiple rings */}
-          <div className="relative w-32 h-32 mb-8">
-            {/* Outer glow ring */}
-            <div
-              className="absolute inset-0 rounded-full border-2 border-blue-400/40"
-              style={{
-                animation: "spin 4s linear infinite",
-              }}
-            />
-            {/* Middle ring */}
-            <div
-              className="absolute inset-3 rounded-full border-2 border-blue-500/30"
-              style={{
-                animation: "spin 3s linear infinite reverse",
-              }}
-            />
-            {/* Logo */}
-            <img
-              src="/logo.png"
-              alt="HexnicAI Logo"
-              className="w-32 h-32 object-contain absolute inset-0"
-              style={{
-                animation: "float 3s ease-in-out infinite",
-              }}
-            />
-          </div>
-
-          {/* Loading text */}
-          <p
-            className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-4"
-            style={{
-              animation: "fadeInOut 2s ease-in-out infinite",
-            }}
-          >
+        {/* Loading text with animated dots */}
+        <div className="flex items-center gap-2">
+          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400">
             Loading HexnicAI
           </p>
-
-          {/* Animated dots */}
-          <div className="flex gap-1">
-            {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"
-                style={{
-                  animation: "bounce 1.4s infinite",
-                  animationDelay: `${i * 0.2}s`,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Progress bar */}
-          <div className="mt-8 w-64 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div className="flex gap-1.5">
             <div
-              className="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+              className="w-2 h-2 bg-blue-600 rounded-full"
               style={{
-                width: "100%",
-                animation: "shimmer 2s ease-in-out infinite",
+                animation: "bounce 1.4s infinite",
+                animationDelay: "0s",
+              }}
+            />
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full"
+              style={{
+                animation: "bounce 1.4s infinite",
+                animationDelay: "0.2s",
+              }}
+            />
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full"
+              style={{
+                animation: "bounce 1.4s infinite",
+                animationDelay: "0.4s",
               }}
             />
           </div>
+        </div>
+
+        {/* Progress indicator */}
+        <div className="mt-8 w-64 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-blue-600 rounded-full"
+            style={{
+              animation: "shimmer 1.5s ease-in-out infinite",
+            }}
+          />
         </div>
       </div>
     )
