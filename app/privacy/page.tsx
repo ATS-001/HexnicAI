@@ -67,14 +67,14 @@ export default function PrivacyPage() {
           </section>
 
           <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
-            <h2 className="text-2xl font-bold mb-4">3. How We Use Your Information</h2>
-            <p className="text-muted-foreground mb-4">We use collected information to:</p>
+            <h2 className="text-2xl font-bold mb-4">1. Information We Collect</h2>
+            <p className="text-muted-foreground mb-4">HexnicAI and all its integrated tools (StudyAI, Speak Easy, FocusAI, IT-Workshop, C Program Master, KTU Discrete Math, CImp, EEIPR) may collect:</p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li>Provide and improve our educational services</li>
-              <li>Personalize your learning experience</li>
-              <li>Analyze platform usage to enhance features</li>
-              <li>Respond to your inquiries and feedback</li>
-              <li>Ensure platform security and prevent misuse</li>
+              <li>Account information (name, email, educational level)</li>
+              <li>Learning preferences and study patterns</li>
+              <li>Usage data and interaction logs</li>
+              <li>Device information (browser, device type)</li>
+              <li>Optional profile information</li>
             </ul>
           </section>
 

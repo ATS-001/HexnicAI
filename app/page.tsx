@@ -173,7 +173,11 @@ const faqs = [
   },
   {
     question: "Is there any other tools?",
-    answer: "Yes, many tools will be launching soon in HexnicAI. Stay tuned...",
+    answer: "Yes, many tools will be launching soon in HexnicAI, Stay tuned...",
+  },
+  {
+    question: "What is EEIPR?",
+    answer: "EEIPR (Engineering, Entrepreneurship and Intellectual Property Rights) is a KTU-indexed learning resources repository providing comprehensive study materials and documentation for engineering students.",
   },
 ]
 
@@ -218,37 +222,108 @@ export default function HexnicAI() {
     }
   }, [isDark])
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const menuButton = document.querySelector("[data-menu-button]")
+      const menuContent = document.querySelector("[data-menu-content]")
+      if (isMenuOpen && menuButton && menuContent && !menuButton.contains(e.target as Node) && !menuContent.contains(e.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+    document.addEventListener("click", handleClickOutside)
+    return () => document.removeEventListener("click", handleClickOutside)
+  }, [isMenuOpen])
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-background flex flex-col items-center justify-center z-10000">
-        <div className="relative w-24 h-24">
-          <img
-            src="/logo.png"
-            alt="HexnicAI Logo"
-            className="w-24 h-24 object-contain"
-            style={{
-              animation: "float 3s ease-in-out infinite",
-            }}
-          />
-          <div
-            className="absolute inset-0 rounded-full bg-blue-500/30"
-            style={{
-              animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-            }}
-          />
+      <div className="fixed inset-0 bg-gradient-to-b from-background via-blue-50/5 to-background flex flex-col items-center justify-center z-[10000] overflow-hidden">
+        {/* Animated background particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-blue-500/20"
+              style={{
+                width: Math.random() * 200 + 100 + "px",
+                height: Math.random() * 200 + 100 + "px",
+                left: Math.random() * 100 + "%",
+                top: Math.random() * 100 + "%",
+                animation: `float ${5 + i}s ease-in-out infinite`,
+                animationDelay: `${i * 0.5}s`,
+                filter: "blur(40px)",
+              }}
+            />
+          ))}
         </div>
-        <p
-          className="mt-8 text-lg font-semibold text-blue-600 dark:text-blue-400"
-          style={{
-            animation: "fadeInOut 2s ease-in-out infinite",
-          }}
-        >
-          Loading HexnicAI...
-        </p>
+
+        {/* Main content */}
+        <div className="relative z-10 flex flex-col items-center">
+          {/* Logo container with multiple rings */}
+          <div className="relative w-32 h-32 mb-8">
+            {/* Outer glow ring */}
+            <div
+              className="absolute inset-0 rounded-full border-2 border-blue-400/40"
+              style={{
+                animation: "spin 4s linear infinite",
+              }}
+            />
+            {/* Middle ring */}
+            <div
+              className="absolute inset-3 rounded-full border-2 border-blue-500/30"
+              style={{
+                animation: "spin 3s linear infinite reverse",
+              }}
+            />
+            {/* Logo */}
+            <img
+              src="/logo.png"
+              alt="HexnicAI Logo"
+              className="w-32 h-32 object-contain absolute inset-0"
+              style={{
+                animation: "float 3s ease-in-out infinite",
+              }}
+            />
+          </div>
+
+          {/* Loading text */}
+          <p
+            className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-4"
+            style={{
+              animation: "fadeInOut 2s ease-in-out infinite",
+            }}
+          >
+            Loading HexnicAI
+          </p>
+
+          {/* Animated dots */}
+          <div className="flex gap-1">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"
+                style={{
+                  animation: "bounce 1.4s infinite",
+                  animationDelay: `${i * 0.2}s`,
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Progress bar */}
+          <div className="mt-8 w-64 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+              style={{
+                width: "100%",
+                animation: "shimmer 2s ease-in-out infinite",
+              }}
+            />
+          </div>
+        </div>
       </div>
     )
   }
@@ -276,62 +351,16 @@ export default function HexnicAI() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden"
+            data-menu-button
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          {/* Desktop navigation */}
-          <div className="hidden md:flex items-center gap-2">
-            {[
-              { label: "Modules", href: "/modules" },
-              { label: "About Us", href: "/about-us" },
-              { label: "Contact", href: "/contact-us" },
-            ].map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="px-4 py-2 rounded-lg font-semibold text-sm hover:bg-accent transition-all duration-300 hover:-translate-y-0.5"
-              >
-                {item.label}
-              </a>
-            ))}
-            <button
-              onClick={() => setIsDark(!isDark)}
-              className="p-2 rounded-lg hover:bg-accent transition-all duration-300 hover:scale-110"
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-            <div className="relative">
-              <button
-                onClick={() => setIsGithubOpen(!isGithubOpen)}
-                className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-full text-sm font-semibold hover:opacity-90 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                <Github size={18} />
-                GitHub
-              </button>
-              {isGithubOpen && (
-                <div className="absolute right-0 top-full mt-2 bg-card border border-border rounded-xl shadow-2xl overflow-hidden min-w-[180px] animate-in fade-in slide-in-from-top-2 duration-200">
-                  {githubLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-4 py-3 text-sm font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-
           {/* Mobile navigation */}
           {isMenuOpen && (
-            <div className="absolute top-full right-[5%] mt-2 bg-card border border-border rounded-xl shadow-2xl p-4 w-56 md:hidden animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute top-full right-[5%] mt-2 bg-card border border-border rounded-xl shadow-2xl p-4 w-56 md:hidden animate-in fade-in slide-in-from-top-2 duration-200" data-menu-content>
               {[
                 { label: "Modules", href: "/modules" },
                 { label: "About Us", href: "/about-us" },
