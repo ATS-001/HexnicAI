@@ -6,7 +6,7 @@ import { Typewriter } from "@/components/typewriter"
 import { AnimatedCard } from "@/components/animated-card"
 import { AnimatedButton } from "@/components/animated-button"
 import { AnimatedText, StaggeredText } from "@/components/animated-text"
-import { Menu, X, ChevronUp, Moon, Sun, Github, Linkedin, Mail } from "lucide-react"
+import { Menu, X, ChevronUp, ChevronDown, Moon, Sun, Github, Linkedin, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const modules = [
@@ -354,17 +354,34 @@ export default function HexnicAI() {
                 {isDark ? "Light Mode" : "Dark Mode"}
               </button>
               <div className="border-t border-border mt-2 pt-2">
-                {githubLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm hover:bg-accent transition-colors rounded-lg"
-                  >
-                    {link.name}
-                  </a>
-                ))}
+                <button
+                  onClick={() => setIsGithubOpen(!isGithubOpen)}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg font-semibold hover:bg-accent transition-colors"
+                >
+                  <span className="flex items-center gap-2">
+                    <Github size={18} />
+                    Repositories
+                  </span>
+                  <ChevronDown
+                    size={18}
+                    className={`transition-transform duration-300 ${isGithubOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {isGithubOpen && (
+                  <div className="mt-2 space-y-1 animate-in fade-in slide-in-from-top-2 duration-200">
+                    {githubLinks.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 text-sm hover:bg-accent transition-colors rounded-lg ml-4"
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           )}
