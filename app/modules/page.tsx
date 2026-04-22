@@ -52,6 +52,12 @@ const modules = [
     linkText: "Explore",
   },
   {
+    title: "EEIPR",
+    description: "Dedicated resource for Engineering Entrepreneurship and Intellectual Property Rights",
+    link: "https://eeipr.vercel.app/",
+    linkText: "Explore",
+  },
+  {
     title: "Coming Soon",
     description: "We are constantly building more tools for personalized learning.",
     link: null,
@@ -88,7 +94,7 @@ export default function ModulesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <BrownianMotion />
-      
+
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-6xl">
         <Link
           href="/"
