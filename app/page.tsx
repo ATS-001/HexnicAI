@@ -520,11 +520,18 @@ export default function HexnicAI() {
               <AnimatedCard animation="slide-in-left" delay={250} className="p-10">
                 <div className="h-full flex flex-col justify-between">
                   <div>
-                    <img
-                      src="/logo.png"
-                      alt="HexnicAI"
-                      className="w-28 h-28 mx-auto mb-8 object-contain"
-                    />
+                    <div className="w-32 h-32 mx-auto mb-8 flex items-center justify-center relative group">
+                      {/* Glassmorphism background with glow */}
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-slate-900/40 via-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-blue-400/20 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300" />
+                      {/* Glow effect */}
+                      <div className="absolute inset-0 rounded-2xl bg-blue-500/10 blur-xl group-hover:bg-blue-500/20 transition-all duration-300" />
+                      {/* Logo */}
+                      <img
+                        src="/logo.png"
+                        alt="HexnicAI"
+                        className="w-28 h-28 object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
                     <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 text-center mb-8">HexnicAI</h3>
                     <ul className="space-y-4">
                       {[
@@ -552,11 +559,18 @@ export default function HexnicAI() {
               <AnimatedCard animation="slide-in-right" delay={300} className="p-10">
                 <div className="h-full flex flex-col justify-between">
                   <div>
-                    <img
-                      src="/cwats-logo.png"
-                      alt="C-WATS"
-                      className="w-28 h-28 mx-auto mb-8 object-contain"
-                    />
+                    <div className="w-32 h-32 mx-auto mb-8 flex items-center justify-center relative group">
+                      {/* Glassmorphism background with glow */}
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-slate-900/40 via-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-blue-400/20 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300" />
+                      {/* Glow effect */}
+                      <div className="absolute inset-0 rounded-2xl bg-blue-500/10 blur-xl group-hover:bg-blue-500/20 transition-all duration-300" />
+                      {/* Logo */}
+                      <img
+                        src="/cwats-logo.png"
+                        alt="C-WATS"
+                        className="w-28 h-28 object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
                     <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 text-center mb-8">C-WATS</h3>
                     <ul className="space-y-4">
                       {[

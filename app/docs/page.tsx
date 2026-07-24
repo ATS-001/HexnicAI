@@ -119,7 +119,6 @@ export default function DocsPage() {
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li><strong>IT-Workshop:</strong> VIVA & LAB exam questions for BTECH CSE courses</li>
-              <li><strong>C Program Master:</strong> Comprehensive C programming practice and resources</li>
               <li><strong>KTU Discrete Math:</strong> Discrete mathematics study materials and problems</li>
               <li><strong>CImp:</strong> C program theory and implementation practice</li>
               <li><strong>EEIPR:</strong> Engineering, Entrepreneurship and Intellectual Property Rights repository</li>
