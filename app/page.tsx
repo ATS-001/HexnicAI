@@ -67,8 +67,9 @@ const roadmap = [
   { title: "StudyAI & SpeakEasy Available in HexnicAI", date: "Feb 2026", direction: "left" },
   { title: "Initial Deployment of HexnicAI Prototype", date: "Feb 2026", direction: "right" },
   { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
-  { title: "C-WATS Platform Introduces Academic Resources", date: "May 2026", direction: "right" },
-  { title: "### Coming Soon ###", date: "2026", direction: "left" },
+  { title: "C Program Master Launch (C-WATS)", date: "Apr 2026", direction: "right" },
+  { title: "C-WATS Platform Expands Academic Resources", date: "May 2026", direction: "left" },
+  { title: "### Coming Soon ###", date: "2026", direction: "right" },
 ]
 
 const team = [
@@ -165,6 +166,7 @@ const githubLinks = [
   { name: "StudyAI", href: "https://github.com/ATS-001/studyai-2026" },
   { name: "Speak Easy", href: "https://github.com/abhinavnixabvv-hue/speak-easy-tools" },
   { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
+  { name: "C Program Master", href: "https://github.com/abhinavnixabvv-hue/C-program" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
