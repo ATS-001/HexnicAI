@@ -97,9 +97,10 @@ export default function DocsPage() {
           </section>
 
           <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
-            <h2 className="text-2xl font-bold mb-4">Community Tools</h2>
+            <h2 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">C-WATS</h2>
             <p className="text-muted-foreground mb-4">
-              Beyond the main platform, we've developed educational tools to support specific learning needs.
+              C-WATS is a dedicated academic ecosystem consisting of independent subject-based websites. Unlike HexnicAI, which provides AI-powered learning tools, C-WATS focuses on organizing academic resources into specialized module websites, allowing students to quickly access notes, question banks, practical resources, and subject-specific materials.<br /><br />
+              Current modules include:
             </p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li><strong>IT-Workshop:</strong> VIVA & LAB exam questions for BTECH CSE courses</li>
