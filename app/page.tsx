@@ -200,15 +200,24 @@ export default function HexnicAI() {
   }, [isDark])
 
   useEffect(() => {
+    if (!isMenuOpen) return
+
     const handleClickOutside = (e: MouseEvent) => {
       const menuButton = document.querySelector("[data-menu-button]")
       const menuContent = document.querySelector("[data-menu-content]")
-      if (isMenuOpen && menuButton && menuContent && !menuButton.contains(e.target as Node) && !menuContent.contains(e.target as Node)) {
+      if (menuButton && menuContent && !menuButton.contains(e.target as Node) && !menuContent.contains(e.target as Node)) {
         setIsMenuOpen(false)
       }
     }
-    document.addEventListener("click", handleClickOutside)
-    return () => document.removeEventListener("click", handleClickOutside)
+
+    const timer = setTimeout(() => {
+      document.addEventListener("click", handleClickOutside)
+    }, 0)
+
+    return () => {
+      clearTimeout(timer)
+      document.removeEventListener("click", handleClickOutside)
+    }
   }, [isMenuOpen])
 
   const scrollToTop = () => {

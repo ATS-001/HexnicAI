@@ -16,20 +16,23 @@ export function AnimatedCard({ children, className, delay = 0, animation = "fade
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (!cardRef.current) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setTimeout(() => setIsVisible(true), delay)
+          observer.unobserve(entry.target)
         }
       },
       { threshold: 0.1 }
     )
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current)
-    }
+    observer.observe(cardRef.current)
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+    }
   }, [delay])
 
   const getAnimationClasses = () => {
