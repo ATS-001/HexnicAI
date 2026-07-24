@@ -84,6 +84,21 @@ export default function DocsPage() {
           </section>
 
           <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
+            <h2 className="text-2xl font-bold mb-4">C Program Master</h2>
+            <p className="text-muted-foreground mb-4">
+              An interactive learning environment dedicated to C programming.
+            </p>
+            <h3 className="font-semibold mb-3">Features</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li>C programming practice</li>
+              <li>Concept explanations</li>
+              <li>Programming exercises</li>
+              <li>Beginner-friendly learning</li>
+              <li>Practical coding resources</li>
+            </ul>
+          </section>
+
+          <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
             <h2 className="text-2xl font-bold mb-4">FocusAI</h2>
             <p className="text-muted-foreground mb-4">
               Assistive tools designed to help you maintain focus and improve learning outcomes with AI-powered recommendations.
