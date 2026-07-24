@@ -487,78 +487,111 @@ export default function HexnicAI() {
       {/* Expanding Beyond AI Section */}
       <section className="py-24 relative z-10">
         <div className="container mx-auto px-4">
-          <AnimatedText animation="fade-up" className="text-center mb-4">
+          <AnimatedText animation="fade-up" className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
               Expanding Beyond AI
             </h2>
           </AnimatedText>
-          <AnimatedText animation="fade-up" className="text-center mb-12" delay={100}>
-            <p className="text-lg text-muted-foreground">
+          <AnimatedText animation="fade-up" className="text-center mb-6" delay={100}>
+            <p className="text-lg font-semibold text-foreground">
               One Ecosystem. Two Platforms.
             </p>
           </AnimatedText>
 
-          <div className="max-w-5xl mx-auto mb-12">
-            <AnimatedText animation="fade-up" className="text-center mb-8" delay={200}>
-              <p className="text-muted-foreground leading-relaxed">
-                HexnicAI has evolved beyond a single platform. Introducing <strong>C-WATS (Community Website - ATS)</strong>, a dedicated ecosystem that connects independent academic module websites into one organized destination. While HexnicAI continues providing intelligent learning tools, C-WATS focuses on subject-specific academic resources, making knowledge easier to access for every student.
+          <div className="max-w-3xl mx-auto">
+            <AnimatedText animation="fade-up" className="text-center mb-16" delay={150}>
+              <p className="text-muted-foreground leading-[1.8] max-w-xl mx-auto">
+                HexnicAI has evolved beyond a single platform. Introducing <strong>C-WATS (Community Website - ATS)</strong>, a dedicated ecosystem that connects independent academic module websites into one organized destination. While HexnicAI continues providing intelligent learning tools, C-WATS focuses on subject-specific academic resources.
               </p>
             </AnimatedText>
 
             {/* Split Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {/* HexnicAI Side */}
-              <AnimatedCard animation="fade-up" delay={300}>
-                <div className="text-center">
-                  <img
-                    src="/logo.png"
-                    alt="HexnicAI"
-                    className="w-24 h-24 mx-auto mb-6 object-contain"
-                  />
-                  <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-6">HexnicAI</h3>
-                  <div className="space-y-3">
-                    {["StudyAI", "Speak Easy Tools", "FocusAI", "C Program Master"].map((tool) => (
-                      <div key={tool} className="px-4 py-2 bg-accent/50 rounded-lg text-sm font-medium">
-                        • {tool}
-                      </div>
-                    ))}
+              <AnimatedCard animation="slide-in-left" delay={250} className="p-10">
+                <div className="h-full flex flex-col justify-between">
+                  <div>
+                    <img
+                      src="/logo.png"
+                      alt="HexnicAI"
+                      className="w-28 h-28 mx-auto mb-8 object-contain"
+                    />
+                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 text-center mb-8">HexnicAI</h3>
+                    <ul className="space-y-4">
+                      {[
+                        { name: "StudyAI", icon: "📚" },
+                        { name: "Speak Easy Tools", icon: "🎙" },
+                        { name: "FocusAI", icon: "🎯" },
+                        { name: "C Program Master", icon: "💻" },
+                      ].map((tool) => (
+                        <li
+                          key={tool.name}
+                          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent/50 transition-all duration-300 cursor-pointer group"
+                        >
+                          <span className="text-xl">{tool.icon}</span>
+                          <span className="font-medium text-foreground group-hover:translate-x-1 transition-transform">
+                            {tool.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </AnimatedCard>
 
               {/* C-WATS Side */}
-              <AnimatedCard animation="fade-up" delay={400}>
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-blue-400 rounded-lg flex items-center justify-center text-white font-bold text-2xl">
-                    C-WATS
-                  </div>
-                  <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-6">C-WATS</h3>
-                  <div className="space-y-3">
-                    {["IT Workshop", "KTU Discrete Mathematics", "CImp", "EEIPR", "FOCFHWTWD"].map((resource) => (
-                      <div key={resource} className="px-4 py-2 bg-accent/50 rounded-lg text-sm font-medium">
-                        • {resource}
-                      </div>
-                    ))}
+              <AnimatedCard animation="slide-in-right" delay={300} className="p-10">
+                <div className="h-full flex flex-col justify-between">
+                  <div>
+                    <img
+                      src="/cwats-logo.png"
+                      alt="C-WATS"
+                      className="w-28 h-28 mx-auto mb-8 object-contain"
+                    />
+                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 text-center mb-8">C-WATS</h3>
+                    <ul className="space-y-4">
+                      {[
+                        { name: "IT Workshop", icon: "🛠" },
+                        { name: "KTU Discrete Math", icon: "📐" },
+                        { name: "C Program Master", icon: "💻" },
+                        { name: "CImp", icon: "💡" },
+                        { name: "EEIPR", icon: "⚡" },
+                        { name: "FOCFHWTWD", icon: "📚" },
+                      ].map((resource) => (
+                        <li
+                          key={resource.name}
+                          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent/50 transition-all duration-300 cursor-pointer group"
+                        >
+                          <span className="text-xl">{resource.icon}</span>
+                          <span className="font-medium text-foreground group-hover:translate-x-1 transition-transform">
+                            {resource.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </AnimatedCard>
             </div>
 
             {/* Vision Statement */}
-            <AnimatedText animation="fade-up" className="text-center mb-8" delay={500}>
-              <p className="text-2xl font-bold text-foreground">
-                One Vision.<br />Two Platforms.<br />One Learning Ecosystem.
-              </p>
+            <AnimatedText animation="fade-up" className="text-center mb-12" delay={400}>
+              <div className="space-y-2">
+                <p className="text-3xl font-bold text-foreground">One Vision.</p>
+                <p className="text-3xl font-bold text-foreground">Two Platforms.</p>
+                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">One Learning Ecosystem.</p>
+              </div>
             </AnimatedText>
 
             {/* Explore Button */}
             <div className="flex justify-center">
               <AnimatedButton
                 href="#"
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold"
-                delay={600}
+                className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                delay={500}
               >
                 Explore C-WATS (Coming Soon)
+                <span>→</span>
               </AnimatedButton>
             </div>
           </div>
