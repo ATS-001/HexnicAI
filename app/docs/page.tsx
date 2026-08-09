@@ -122,6 +122,7 @@ export default function DocsPage() {
               <li><strong>KTU Discrete Math:</strong> Discrete mathematics study materials and problems</li>
               <li><strong>CImp:</strong> C program theory and implementation practice</li>
               <li><strong>EEIPR:</strong> Engineering, Entrepreneurship and Intellectual Property Rights repository</li>
+              <li><strong>DigiDes:</strong> Digital design resources and learning materials</li>
             </ul>
           </section>
 
