@@ -7,7 +7,7 @@ interface AnimatedCardProps {
   children: React.ReactNode
   className?: string
   delay?: number
-  animation?: "fade-up" | "fade-down" | "fade-left" | "fade-right" | "zoom-in" | "blur-in"
+  animation?: "fade-up" | "fade-down" | "fade-left" | "fade-right" | "zoom-in" | "blur-in" | "slide-in-left" | "slide-in-right"
 }
 
 export function AnimatedCard({ children, className, delay = 0, animation = "fade-up" }: AnimatedCardProps) {
@@ -16,21 +16,38 @@ export function AnimatedCard({ children, className, delay = 0, animation = "fade
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (!cardRef.current) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setTimeout(() => setIsVisible(true), delay)
+          observer.unobserve(entry.target)
         }
       },
       { threshold: 0.1 }
     )
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current)
-    }
+    observer.observe(cardRef.current)
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+    }
   }, [delay])
+
+  const getAnimationClasses = () => {
+    if (!isVisible) {
+      switch (animation) {
+        case "slide-in-left":
+          return "-translate-x-12 opacity-0"
+        case "slide-in-right":
+          return "translate-x-12 opacity-0"
+        default:
+          return "opacity-0 translate-y-8"
+      }
+    }
+    return "opacity-100 translate-x-0 translate-y-0"
+  }
 
   return (
     <div
@@ -40,9 +57,7 @@ export function AnimatedCard({ children, className, delay = 0, animation = "fade
       className={cn(
         "relative overflow-hidden rounded-3xl border border-border/50 bg-card p-8 text-center",
         "transition-all duration-500 ease-out",
-        isVisible
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-8",
+        getAnimationClasses(),
         isHovered && "scale-[1.02] -translate-y-2 shadow-2xl border-primary/50",
         className
       )}

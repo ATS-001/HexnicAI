@@ -11,37 +11,37 @@ const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)\nDeveloper (EEIPR)",
+    role: "CEO (Chief Executive Officer)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {
     initials: "AT",
     name: "Alwin Thomas V",
-    role: "Co-Developer (StudyAI)",
+    role: "CXO (Chief Experience Officer)",
     linkedin: "https://www.linkedin.com/in/alwin-thomas-v-033057384/",
   },
   {
     initials: "AN",
     name: "Abhinav N",
-    role: "Co-Developer (Speak Easy Tools)\nDeveloper (C Program Master)",
+    role: "CTO (Chief Technology Officer)",
     linkedin: "https://www.linkedin.com/in/abhinav-n-713a84383/",
   },
   {
     initials: "AB",
     name: "Adithya Binesh",
-    role: "Lead & Co-Developer (Speak Easy Tools)\nDeveloper (FocusAI)",
+    role: "CVCO (Chief Visionary & Creative Officer)",
     linkedin: "https://www.linkedin.com/in/adithya-binesh-631270388/",
   },
   {
     initials: "AS",
     name: "Adhin Seby",
-    role: "Co-Developer & Tester",
+    role: "A-CXO (UX) (Assistant Chief Experience Officer, User Experience)",
     linkedin: "https://www.linkedin.com/in/adhin-seby-4b6b45384/",
   },
   {
     initials: "AK",
     name: "Akshay T S",
-    role: "Co-Developer & Tester",
+    role: "A-CXO (UI) (Assistant Chief Experience Officer, User Interface)",
     linkedin: "https://www.linkedin.com/in/akshay-t-s-487b90382/",
   },
 ]

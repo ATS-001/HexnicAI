@@ -57,24 +57,13 @@ export default function PrivacyPage() {
 
           <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
             <h2 className="text-2xl font-bold mb-4">2. Information We Collect</h2>
-            <p className="text-muted-foreground mb-4">We may collect the following types of information:</p>
+            <p className="text-muted-foreground mb-4">HexnicAI and C-WATS may collect the following types of information:</p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li><strong>Usage Data:</strong> Information about how you interact with our platform</li>
+              <li><strong>Account Information:</strong> Name, email, and educational level</li>
+              <li><strong>Learning Data:</strong> Study preferences, learning patterns, and progress within modules</li>
+              <li><strong>Usage Data:</strong> Information about how you interact with our platforms</li>
               <li><strong>Device Information:</strong> Browser type, operating system, and device identifiers</li>
-              <li><strong>Learning Data:</strong> Study preferences and progress within our modules</li>
-              <li><strong>Feedback:</strong> Information you provide through our feedback forms</li>
-            </ul>
-          </section>
-
-          <section className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8">
-            <h2 className="text-2xl font-bold mb-4">1. Information We Collect</h2>
-            <p className="text-muted-foreground mb-4">HexnicAI and all its integrated tools (StudyAI, Speak Easy, FocusAI, IT-Workshop, C Program Master, KTU Discrete Math, CImp, EEIPR) may collect:</p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li>Account information (name, email, educational level)</li>
-              <li>Learning preferences and study patterns</li>
-              <li>Usage data and interaction logs</li>
-              <li>Device information (browser, device type)</li>
-              <li>Optional profile information</li>
+              <li><strong>Feedback:</strong> Information you provide through feedback forms</li>
             </ul>
           </section>
 

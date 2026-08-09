@@ -63,53 +63,52 @@ const modules = [
 const roadmap = [
   { title: "ATS_PDZ Formed", date: "Jan 2023", direction: "right" },
   { title: "HexnicAI Conceptualized", date: "Dec 2025", direction: "left" },
-  { title: "Initial Tool (StudyAI,SpeakEasy) Release", date: "Jan 2026", direction: "right" },
-  { title: "(StudyAI,SpeakEasy) Available in HexnicAI", date: "Feb 2026", direction: "left" },
+  { title: "Initial Tool (StudyAI, SpeakEasy) Release", date: "Jan 2026", direction: "right" },
+  { title: "StudyAI & SpeakEasy Available in HexnicAI", date: "Feb 2026", direction: "left" },
   { title: "Initial Deployment of HexnicAI Prototype", date: "Feb 2026", direction: "right" },
-  { title: "IT-Workshop Launch", date: "Apr 2026", direction: "left" },
-  { title: "C Program Master Launch", date: "Apr 2026", direction: "right" },
   { title: "FocusAI Launch", date: "Apr 2026", direction: "left" },
-  { title: "KTU Discrete Math Launch", date: "Apr 2026", direction: "right" },
-  { title: "CImp Launch", date: "Apr 2026", direction: "left" },
-  { title: "EEIPR Launch", date: "Apr 2026", direction: "right" },
-  { title: "### Coming Soon ###", date: "2026", direction: "left" },
+  { title: "C Program Master Launch (C-WATS)", date: "Apr 2026", direction: "right" },
+  { title: "C-WATS Platform Expands Academic Resources", date: "May 2026", direction: "left" },
+  { title: "HexnicAI Version 2 Deployed", date: "May 2026", direction: "right" },
+  { title: "HexnicAI Version 3 Deployed", date: "Aug 2026", direction: "left" },
+  { title: "### Coming Soon ###", date: "2026", direction: "right" },
 ]
 
 const team = [
   {
     initials: "ATS",
     name: "Aaron Thalakkottor Sooraj",
-    role: "Founder & Lead (HexnicAI)\nCo-Developer (StudyAI)\nDeveloper (IT-Workshop)\nDeveloper (KTU Discrete Math)\nDeveloper (CImp)\nDeveloper (EEIPR)",
+    role: "CEO (Chief Executive Officer)",
     linkedin: "https://www.linkedin.com/in/aaronts127pdz/",
   },
   {
     initials: "AT",
     name: "Alwin Thomas V",
-    role: "Co-Developer (StudyAI)",
+    role: "CXO (Chief Experience Officer)",
     linkedin: "https://www.linkedin.com/in/alwin-thomas-v-033057384/",
   },
   {
     initials: "AN",
     name: "Abhinav N",
-    role: "Co-Developer (Speak Easy Tools)\nDeveloper (C Program Master)",
+    role: "CTO (Chief Technology Officer)",
     linkedin: "https://www.linkedin.com/in/abhinav-n-713a84383/",
   },
   {
     initials: "AB",
     name: "Adithya Binesh",
-    role: "Lead & Co-Developer (Speak Easy Tools)\nDeveloper (FocusAI)",
+    role: "CVCO (Chief Visionary & Creative Officer)",
     linkedin: "https://www.linkedin.com/in/adithya-binesh-631270388/",
   },
   {
     initials: "AS",
     name: "Adhin Seby",
-    role: "Co-Developer",
+    role: "A-CXO (UX) (Assistant Chief Experience Officer, User Experience)",
     linkedin: "https://www.linkedin.com/in/adhin-seby-4b6b45384/",
   },
   {
     initials: "AK",
     name: "Akshay T S",
-    role: "Co-Developer",
+    role: "A-CXO (UI) (Assistant Chief Experience Officer, User Interface)",
     linkedin: "https://www.linkedin.com/in/akshay-t-s-487b90382/",
   },
 ]
@@ -148,48 +147,28 @@ const faqs = [
     answer: "Speak Easy is an accessibility tool designed to help users with speech and communication challenges interact more easily with technology. It developed by Adithya and Abhinav",
   },
   {
-    question: "What is IT-Workshop?",
-    answer: "IT-Workshop is a tool which includes all VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop, making it easier for students to understand. It is Developed by Aaron",
-  },
-  {
     question: "What is FocusAI?",
     answer: "FocusAI is an AI-powered learning platform that helps students improve productivity, understand concepts, and manage their studies efficiently through smart tools like AI assistance, task tracking, and study analytics. It is Developed by Adithya",
-  },
-  {
-    question: "What is C Program Master?",
-    answer: "C Program Master is a tool which includes all Programming in C lab Questions. It is Developed by Abhinav",
-  },
-  {
-    question: "What is KTU Discrete Math?",
-    answer: "KTU Discrete Math is a tool which includes all Exam Questions of BTECH CSE Semester 2 Discrete Maths, making it easier for students to understand. It is Developed by Aaron",
-  },
-  {
-    question: "What is CImp?",
-    answer: "CImp is a tool which includes all Exam Questions of BTECH CSE Semester 2 Programming in C, making it easier for students to understand. It is Developed by Aaron",
   },
   {
     question: "Who can benefit from HexnicAI?",
     answer: "Students, educators, and learners who want structured study planning or accessibility tools for learning.",
   },
   {
-    question: "Is there any other tools?",
-    answer: "Yes, many tools will be launching soon in HexnicAI, Stay tuned...",
+    question: "What is C-WATS?",
+    answer: "C-WATS is a dedicated academic ecosystem that connects independent subject-based websites. Each module focuses on a specific academic course and provides organized learning resources. As the HexnicAI ecosystem expanded, separating AI tools from subject-specific academic resources created a more organized and focused learning experience.",
   },
   {
-    question: "What is EEIPR?",
-    answer: "EEIPR (Engineering, Entrepreneurship and Intellectual Property Rights) is a KTU-indexed learning resources repository providing comprehensive study materials and documentation for engineering students.",
+    question: "Is there any other tools?",
+    answer: "Yes, many tools will be launching soon in HexnicAI and through C-WATS. Stay tuned...",
   },
 ]
 
 const githubLinks = [
   { name: "StudyAI", href: "https://github.com/ATS-001/studyai-2026" },
   { name: "Speak Easy", href: "https://github.com/abhinavnixabvv-hue/speak-easy-tools" },
-  { name: "IT-Workshop", href: "https://github.com/ATS-001/IT-Workshop" },
-  { name: "C Program Master", href: "https://github.com/abhinavnixabvv-hue/C-program" },
   { name: "FocusAI", href: "https://github.com/Adithya-Binesh-007/focusai-study-suite" },
-  { name: "KTU Discrete Math", href: "https://github.com/ATS-001/Discrete-Maths-ModelPaper24" },
-  { name: "CImp", href: "https://github.com/ATS-001/CImp" },
-  { name: "EEIPR", href: "https://github.com/ATS-001/EEIPR" },
+  { name: "C Program Master", href: "https://github.com/abhinavnixabvv-hue/C-program" },
   { name: "HexnicAI Core", href: "https://github.com/ATS-001/HexnicAI" },
 ]
 
@@ -223,15 +202,24 @@ export default function HexnicAI() {
   }, [isDark])
 
   useEffect(() => {
+    if (!isMenuOpen) return
+
     const handleClickOutside = (e: MouseEvent) => {
       const menuButton = document.querySelector("[data-menu-button]")
       const menuContent = document.querySelector("[data-menu-content]")
-      if (isMenuOpen && menuButton && menuContent && !menuButton.contains(e.target as Node) && !menuContent.contains(e.target as Node)) {
+      if (menuButton && menuContent && !menuButton.contains(e.target as Node) && !menuContent.contains(e.target as Node)) {
         setIsMenuOpen(false)
       }
     }
-    document.addEventListener("click", handleClickOutside)
-    return () => document.removeEventListener("click", handleClickOutside)
+
+    const timer = setTimeout(() => {
+      document.addEventListener("click", handleClickOutside)
+    }, 0)
+
+    return () => {
+      clearTimeout(timer)
+      document.removeEventListener("click", handleClickOutside)
+    }
   }, [isMenuOpen])
 
   const scrollToTop = () => {
@@ -503,6 +491,135 @@ export default function HexnicAI() {
                 </AnimatedText>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Expanding Beyond AI Section */}
+      <section className="py-24 relative z-10">
+        <div className="container mx-auto px-4">
+          <AnimatedText animation="fade-up" className="text-center mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">
+              Expanding Beyond AI
+            </h2>
+          </AnimatedText>
+          <AnimatedText animation="fade-up" className="text-center mb-6" delay={100}>
+            <p className="text-lg font-semibold text-foreground">
+              One Ecosystem. Two Platforms.
+            </p>
+          </AnimatedText>
+
+          <div className="max-w-3xl mx-auto">
+            <AnimatedText animation="fade-up" className="text-center mb-16" delay={150}>
+              <p className="text-muted-foreground leading-[1.8] max-w-xl mx-auto">
+                HexnicAI has evolved beyond a single platform. Introducing <strong>C-WATS (Community Website - ATS)</strong>, a dedicated ecosystem that connects independent academic module websites into one organized destination. While HexnicAI continues providing intelligent learning tools, C-WATS focuses on subject-specific academic resources.
+              </p>
+            </AnimatedText>
+
+            {/* Split Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {/* HexnicAI Side */}
+              <AnimatedCard animation="slide-in-left" delay={250} className="p-10">
+                <div className="h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-32 h-32 mx-auto mb-8 flex items-center justify-center relative group">
+                      {/* Glassmorphism background with glow */}
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-slate-900/40 via-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-blue-400/20 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300" />
+                      {/* Glow effect */}
+                      <div className="absolute inset-0 rounded-2xl bg-blue-500/10 blur-xl group-hover:bg-blue-500/20 transition-all duration-300" />
+                      {/* Logo */}
+                      <img
+                        src="/logo.png"
+                        alt="HexnicAI"
+                        className="w-28 h-28 object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 text-center mb-8">HexnicAI</h3>
+                    <ul className="space-y-4">
+                      {[
+                        { name: "StudyAI", icon: "📚" },
+                        { name: "Speak Easy Tools", icon: "🎙" },
+                        { name: "FocusAI", icon: "🎯" },
+                        { name: "C Program Master", icon: "💻" },
+                      ].map((tool) => (
+                        <li
+                          key={tool.name}
+                          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent/50 transition-all duration-300 cursor-pointer group"
+                        >
+                          <span className="text-xl">{tool.icon}</span>
+                          <span className="font-medium text-foreground group-hover:translate-x-1 transition-transform">
+                            {tool.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </AnimatedCard>
+
+              {/* C-WATS Side */}
+              <AnimatedCard animation="slide-in-right" delay={300} className="p-10">
+                <div className="h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-32 h-32 mx-auto mb-8 flex items-center justify-center relative group">
+                      {/* Glassmorphism background with glow */}
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-slate-900/40 via-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-blue-400/20 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/30 transition-all duration-300" />
+                      {/* Glow effect */}
+                      <div className="absolute inset-0 rounded-2xl bg-blue-500/10 blur-xl group-hover:bg-blue-500/20 transition-all duration-300" />
+                      {/* Logo */}
+                      <img
+                        src="/cwats-logo.png"
+                        alt="C-WATS"
+                        className="w-28 h-28 object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 text-center mb-8">C-WATS</h3>
+                    <ul className="space-y-4">
+                      {[
+                        { name: "IT Workshop", icon: "🛠" },
+                        { name: "KTU Discrete Math", icon: "📐" },
+                        { name: "C Program Master", icon: "💻" },
+                        { name: "CImp", icon: "💡" },
+                        { name: "EEIPR", icon: "⚡" },
+                        { name: "DigiDes", icon: "📱" },
+                        { name: "FOCFHWTWD", icon: "📚" },
+                      ].map((resource) => (
+                        <li
+                          key={resource.name}
+                          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent/50 transition-all duration-300 cursor-pointer group"
+                        >
+                          <span className="text-xl">{resource.icon}</span>
+                          <span className="font-medium text-foreground group-hover:translate-x-1 transition-transform">
+                            {resource.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </AnimatedCard>
+            </div>
+
+            {/* Vision Statement */}
+            <AnimatedText animation="fade-up" className="text-center mb-12" delay={400}>
+              <div className="space-y-2">
+                <p className="text-3xl font-bold text-foreground">One Vision.</p>
+                <p className="text-3xl font-bold text-foreground">Two Platforms.</p>
+                <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">One Learning Ecosystem.</p>
+              </div>
+            </AnimatedText>
+
+            {/* Explore Button */}
+            <div className="flex justify-center">
+              <AnimatedButton
+                href="#"
+                className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                delay={500}
+              >
+                Explore C-WATS
+                <span>→</span>
+              </AnimatedButton>
+            </div>
           </div>
         </div>
       </section>
