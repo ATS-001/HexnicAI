@@ -6,9 +6,23 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
+  ],
+}
+
 export const metadata: Metadata = {
-  title: 'HexnicAI (Hexnic AI) – AI Learning Platform with StudyAI, SpeakEasy & FocusAI',
-  description: 'HexnicAI (also known as Hexnic AI) is an AI-powered personalized learning platform featuring StudyAI smart timetable generation, SpeakEasy accessibility tools, and FocusAI assistant.',
+  metadataBase: new URL('https://hexnicai.vercel.app'),
+  title: {
+    default: 'HexnicAI – AI-Powered Personalized Learning Platform',
+    template: '%s | HexnicAI',
+  },
+  description: 'HexnicAI is an AI-powered personalized and inclusive learning platform with StudyAI, SpeakEasy, FocusAI, and C-WATS academic resources for students.',
 
   keywords: [
     'HexnicAI',
@@ -45,10 +59,28 @@ export const metadata: Metadata = {
     'AI powered learning platform'
   ],
 
-  authors: [{ name: 'Aaron Thalakkottor Sooraj and Team HexnicAI' }],
+  authors: [{ name: 'Team HexnicAI', url: 'https://hexnicai.vercel.app/about-us' }],
+  creator: 'Team HexnicAI',
+  publisher: 'Team HexnicAI',
   generator: 'Next.js',
   applicationName: 'HexnicAI',
-  robots: 'index, follow',
+  category: 'education',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+  },
 
   icons: {
     icon: '/logo.png',
@@ -60,10 +92,12 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'HexnicAI (Hexnic AI) – AI Tools for Smarter Learning',
-    description: 'HexnicAI (Hexnic AI) provides AI tools for students including StudyAI timetable generation, SpeakEasy accessibility tools, and FocusAI AI assistant.',
+    title: 'HexnicAI – AI-Powered Personalized Learning Platform',
+    description: 'Explore HexnicAI learning tools and the C-WATS academic ecosystem, built for smarter, more accessible education.',
     type: 'website',
-    url: 'https://hexnicai.vercel.app',
+    url: '/',
+    siteName: 'HexnicAI',
+    locale: 'en_US',
     images: [
       {
         url: 'https://hexnicai.vercel.app/preview.png',
@@ -76,8 +110,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'HexnicAI (Hexnic AI) – AI Tools for Students',
-    description: 'Study smarter with HexnicAI (Hexnic AI). Includes StudyAI timetable generator, SpeakEasy accessibility tools, and FocusAI AI assistant.',
+    title: 'HexnicAI – AI-Powered Personalized Learning Platform',
+    description: 'Study smarter with HexnicAI tools and explore the C-WATS academic ecosystem for accessible learning.',
+    creator: '@HexnicAI',
     images: ['https://hexnicai.vercel.app/preview.png'],
   },
 

@@ -123,6 +123,7 @@ export default function DocsPage() {
               <li><strong>CImp:</strong> C program theory and implementation practice</li>
               <li><strong>EEIPR:</strong> Engineering, Entrepreneurship and Intellectual Property Rights repository</li>
               <li><strong>DigiDes:</strong> Digital design resources and learning materials</li>
+              <li><strong>FOCFHWTWD:</strong> Foundations of Computing learning resources and materials</li>
             </ul>
           </section>
 
