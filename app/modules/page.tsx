@@ -22,12 +22,6 @@ const modules = [
     linkText: "Explore",
   },
   {
-    title: "IT-Workshop",
-    description: "VIVA & LAB Exam Questions of BTECH CSE Semester 2 IT Workshop",
-    link: "https://it-workshops2-2024.vercel.app/",
-    linkText: "Explore",
-  },
-  {
     title: "C Program Master",
     description: "Dedicated resource for C Lab practice.",
     link: "https://c-program-nine.vercel.app/",
@@ -37,24 +31,6 @@ const modules = [
     title: "FocusAI",
     description: "Assistive tools designed for learning.",
     link: "https://focusai-study-suite.vercel.app/",
-    linkText: "Explore",
-  },
-  {
-    title: "KTU Discrete Math",
-    description: "Assistive tools designed for learning Discrete Math.",
-    link: "https://discrete-maths-model-paper24.vercel.app/",
-    linkText: "Explore",
-  },
-  {
-    title: "CImp",
-    description: "Dedicated resource for C Program & Theory practice",
-    link: "https://c-imp.vercel.app/",
-    linkText: "Explore",
-  },
-  {
-    title: "EEIPR",
-    description: "Dedicated resource for Engineering Entrepreneurship and Intellectual Property Rights",
-    link: "https://eeipr.vercel.app/",
     linkText: "Explore",
   },
   {

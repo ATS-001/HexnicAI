@@ -42,7 +42,7 @@ export function BrownianMotion({ isDark }: { isDark: boolean }) {
         vx: (Math.random() - 0.5) * 2.8,
         vy: (Math.random() - 0.5) * 2.8,
         radius: Math.random() * 3.5 + 1.5,
-        opacity: Math.random() * 0.45 + 0.45,
+        opacity: Math.random() * 0.3 + 0.7,
       })
     }
 
