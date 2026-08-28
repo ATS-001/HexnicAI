@@ -446,10 +446,15 @@ export default function HexnicAI() {
           <AnimatedText animation="fade-up" delay={200}>
             <div className="inline-block px-6 py-3 bg-linear-to-r from-blue-600 to-blue-500 text-white rounded-full font-bold text-sm">
               Smart Planning & Inclusivity
-            </div>
-          </AnimatedText>
-        </div>
-      </section>
+  </div>
+  </AnimatedText>
+  <AnimatedText animation="fade-up" delay={300}>
+  <div className="inline-block mt-3 px-6 py-3 bg-linear-to-r from-sky-400 to-cyan-400 text-white rounded-full font-bold text-sm shadow-md shadow-sky-300/30">
+  Version 3 |8|26|
+  </div>
+  </AnimatedText>
+  </div>
+  </section>
 
       {/* Roadmap Section */}
       <section id="roadmap" className="py-24 relative z-10">

@@ -77,7 +77,7 @@ export function BrownianMotion({ isDark }: { isDark: boolean }) {
         if (particle.y > canvas.height) particle.y = 0
 
         // Draw a soft halo and a crisp particle so the motion stays visible.
-        const particleColor = isDark ? "14, 165, 233" : "0, 119, 190"
+        const particleColor = isDark ? "56, 189, 248" : "38, 180, 230"
         const glow = ctx.createRadialGradient(
           particle.x,
           particle.y,
