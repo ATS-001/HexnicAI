@@ -448,11 +448,9 @@ export default function HexnicAI() {
               Smart Planning & Inclusivity
   </div>
   </AnimatedText>
-  <AnimatedText animation="fade-up" delay={300}>
-  <div className="inline-block mt-3 px-6 py-3 bg-linear-to-r from-sky-400 to-cyan-400 text-white rounded-full font-bold text-sm shadow-md shadow-sky-300/30">
-  Version 3 |8|26|
+  <div className="inline-block mt-3 px-6 py-3 bg-linear-to-r from-sky-400 to-cyan-400 text-white rounded-full font-bold text-sm shadow-md shadow-sky-300/30 opacity-100 visible">
+    Version 3 |8|26|
   </div>
-  </AnimatedText>
   </div>
   </section>
 
